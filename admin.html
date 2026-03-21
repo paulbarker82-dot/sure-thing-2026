@@ -736,7 +736,7 @@ function initRoundSelector(){
   const sel=document.getElementById('roundSelect');
   for(let i=1;i<=MAX_ROUNDS;i++){const o=document.createElement('option');o.value=i;o.textContent='Round '+i;sel.appendChild(o);}
 }
-function render(){renderBets();renderSummary();renderLeaderboard();renderHistory();renderCharts();}
+function render(){renderBets();renderSummary();renderLeaderboard();renderSimpleLeaderboard();renderHistory();renderCharts();}
 
 
 // ── PIN ──

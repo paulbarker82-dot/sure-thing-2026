@@ -48,8 +48,8 @@ body{font-family:'Barlow',sans-serif;background:var(--page-bg);color:var(--text-
 .ticker-item{display:inline-flex;align-items:center;gap:.5rem;}
 .ticker-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.4);}
 /* HEADER */
-header{background:var(--header-bg);border-bottom:3px solid var(--header-border);position:sticky;top:0;z-index:200;box-shadow:0 2px 16px rgba(15,31,61,.25);}
-.header-main{max-width:1400px;margin:0 auto;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+header{background:var(--header-bg);border-bottom:3px solid var(--header-border);position:sticky;top:0;z-index:200;box-shadow:0 2px 16px rgba(15,31,61,.25);} .ticker-bar{position:relative;z-index:100;}
+.header-main{max-width:1400px;margin:0 auto;padding:.6rem .85rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:nowrap;}
 .logo-section{display:flex;align-items:center;gap:1rem;}
 .logo-image{width:56px;height:auto;border-radius:8px;box-shadow:0 0 0 2px var(--blue-mid),0 4px 12px rgba(59,130,246,.35);object-fit:contain;}
 .logo-text{display:flex;flex-direction:column;line-height:1.1;}
@@ -353,7 +353,7 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
 .btn-voided{color:var(--voided-text);}
 .btn-voided:hover{background:var(--voided-bg);}
 /* PIN SCREEN */
-.pin-screen{position:fixed;inset:0;background:#1e3a6e;z-index:9999;display:flex;align-items:center;justify-content:center;}
+.pin-screen{position:fixed;top:0;left:0;right:0;bottom:0;width:100vw;height:100vh;background:#1e3a6e;z-index:99999;display:flex;align-items:center;justify-content:center;overflow:hidden;}
 .pin-box{background:var(--card);border-radius:16px;padding:2.5rem 2rem;width:100%;max-width:340px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3);}
 .pin-logo{width:80px;height:auto;border-radius:10px;margin:0 auto 1.25rem;box-shadow:0 0 0 3px var(--blue-mid);}
 .pin-title{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;text-transform:uppercase;letter-spacing:1px;color:var(--text-primary);margin-bottom:.25rem;}
@@ -375,8 +375,23 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
 .setup-input{flex:1;min-width:260px;padding:.65rem .9rem;background:var(--white);color:var(--text-primary);border:1.5px solid var(--border-strong);border-radius:6px;font-family:'Barlow',sans-serif;font-size:.95rem;}
 .setup-input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.12);}
 @media(max-width:768px){.form-grid{grid-template-columns:1fr;}}
+
+@media(max-width:768px){
+  .header-main{padding:.5rem .75rem;gap:.4rem;}
+  .logo-image{width:38px;}
+  .logo-main{font-size:1.3rem;}
+  .logo-sub{font-size:.7rem;letter-spacing:1.5px;}
+  .header-right{gap:.4rem;flex-wrap:nowrap;}
+  .admin-badge{font-size:.65rem;padding:.25rem .45rem;letter-spacing:1px;}
+  .sync-status{font-size:.7rem;padding:.3rem .5rem;}
+  .btn.btn-ghost{font-size:.7rem;padding:.3rem .6rem;}
+  .theme-toggle{width:28px;height:28px;font-size:.9rem;}
+  .font-toggle{height:28px;padding:0 7px;}
+  .font-toggle .ft-small{font-size:9px;}
+  .font-toggle .ft-large{font-size:12px;}
+}
 </style>
-</head><body>
+</head><body style="overflow:hidden;">
 
 <div class="pin-screen" id="pinScreen">
   <div class="pin-box">
@@ -404,6 +419,7 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
     </div>
     <div class="pin-error" id="pinError"></div>
 </div>
+<div id="mainApp" style="display:none;">
 <style>.spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite;}@keyframes spin{{to{{transform:rotate(360deg)}}}}@keyframes livepulse{{0%,100%{{opacity:1;transform:scale(1)}}50%{{opacity:.4;transform:scale(.8)}}}}.loading-screen{{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;gap:1rem;color:var(--text-muted);font-size:1.1rem;}}</style>
 <div class="ticker-bar"><div class="ticker-inner"><span class="ticker-item"><span class="ticker-dot"></span>AFL 2026 SEASON</span><span class="ticker-item"><span class="ticker-dot"></span>SURE THING PUNTERS CLUB</span><span class="ticker-item"><span class="ticker-dot"></span>LIVE BETS & LEADERBOARD</span><span class="ticker-item"><span class="ticker-dot"></span>AFL BETTING TRACKER</span><span class="ticker-item"><span class="ticker-dot"></span>BET RESPONSIBLY 18+</span><span class="ticker-item"><span class="ticker-dot"></span>AFL 2026 SEASON</span><span class="ticker-item"><span class="ticker-dot"></span>SURE THING PUNTERS CLUB</span><span class="ticker-item"><span class="ticker-dot"></span>LIVE BETS & LEADERBOARD</span><span class="ticker-item"><span class="ticker-dot"></span>AFL BETTING TRACKER</span><span class="ticker-item"><span class="ticker-dot"></span>BET RESPONSIBLY 18+</span></div></div>
 <header>
@@ -500,6 +516,7 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
   </nav>
 <footer><p>Gamble responsibly. 18+ only. Gambling Help Online: 1800 858 858.</p></footer>
 
+</div><!-- end mainApp -->
 <script>
 const SHOW_ACTIONS=true;
 
@@ -801,6 +818,7 @@ function checkPin() {
   const stored = localStorage.getItem('admin_pin') || CORRECT_PIN;
   if(pinEntry === stored) {
     document.getElementById('pinScreen').style.display = 'none';
+    document.getElementById('mainApp').style.display = 'block';
   } else {
     document.getElementById('pinError').textContent = 'Incorrect PIN. Try again.';
     for(let i=0;i<6;i++) document.getElementById('pd'+i).classList.add('error');
@@ -882,4 +900,5 @@ function resetAllData() { if(!confirm('Reset all data?')) return; data={rounds:{
 window.addEventListener('load', () => { initTheme(); initFontSize(); loadLocalData(); initRoundSelector(); render(); loadConfig(); });
 </script>
 <script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/service-worker.js'));</script>
+</div><!-- end mainApp -->
 </body></html>

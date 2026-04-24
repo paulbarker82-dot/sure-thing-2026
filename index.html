@@ -23,6 +23,9 @@
   --green:#16a34a;--green-bg:#f0fdf4;--green-border:#bbf7d0;
   --red:#dc2626;--red-bg:#fef2f2;--red-border:#fecaca;
   --pending-bg:#fffbeb;--pending-border:#fde68a;--pending-text:#b45309;
+  --voided-bg: #f5f3ff;
+  --voided-border: #ddd6fe;
+  --voided-text: #7c3aed;
   --card:#ffffff;--page-bg:#f4f7fb;--header-bg:#1e3a6e;--header-border:#3b82f6;
   --ticker-bg:#0f1f3d;--logo-sub:#93c5fd;--leaderboard-head:#1e3a6e;--lh-text:#93c5fd;
   --tab-inactive:#7a93b4;--stat-value:#0f1f3d;
@@ -117,6 +120,9 @@ header{background:var(--header-bg);border-bottom:3px solid var(--header-border);
 .bet-card.won .bet-card-top{background:var(--green-bg);}
 .bet-card.lost{border-color:var(--red-border);}
 .bet-card.lost .bet-card-top{background:var(--red-bg);}
+.bet-status-badge.voided{background:var(--voided-bg);color:var(--voided-text);border:1px solid var(--voided-border);}
+.bet-card.voided{border-color:var(--voided-border);}
+.bet-card.voided .bet-card-top{background:var(--voided-bg);}
 .bet-card-stats{display:flex;padding:.9rem 1.25rem;background:var(--off-white);}
 .bet-stat{flex:1;text-align:center;padding:.2rem 0;border-right:1px solid var(--border);}
 .bet-stat:last-child{border-right:none;}
@@ -370,7 +376,7 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
   <div id="leaderboard" class="tab-content">
     <div class="section-heading">Current Standings</div>
   <div class="leaderboard-wrap"><table class="leaderboard-table">
-    <thead><tr><th>Rank</th><th>Wins</th><th>Losses</th><th>Pending</th><th>Wagered</th><th>Winnings</th><th>Net P&amp;L</th></tr></thead>
+    <thead><tr><th>Rank</th><th>Wins</th><th>Losses</th><th>Voided</th><th>Pending</th><th>Wagered</th><th>Winnings</th><th>Net P&amp;L</th></tr></thead>
     <tbody id="leaderboardBody"></tbody>
   </table></div>
   </div>
@@ -484,7 +490,7 @@ function renderSummary(){
 
 // ── BET CARDS ──
 function betCardHTML(bet,showActions){
-  const statusLabel = bet.status==='pending'?'⏳ Live':bet.status==='won'?'✓ Won':'✗ Lost';
+  const statusLabel = bet.status==='pending'?'⏳ Live':bet.status==='won'?'✓ Won':bet.status==='voided'?'∅ Voided':'✗ Lost';
   const comment = bet.comment?`<div class="bet-comment">💬 ${bet.comment}</div>`:'';
   const actions = showActions?`<div class="bet-card-actions">
     <button class="btn-won" onclick="updateBetStatus(${bet.id},'won')">✓ Won</button>
@@ -518,13 +524,14 @@ function renderBets(){
 
 function calculateStats(){
   const stats={};
-  PLAYERS.forEach(p=>{stats[p]={wins:0,losses:0,pending:0,totalWagered:0,totalWinnings:0};});
+  PLAYERS.forEach(p=>{stats[p]={wins:0,losses:0,voided:0,pending:0,totalWagered:0,totalWinnings:0};});
   Object.values(data.rounds).forEach(bets=>{
     bets.forEach(bet=>{
       const s=stats[bet.player];
       s.totalWagered+=bet.wager;
       if(bet.status==='won'){s.wins++;s.totalWinnings+=bet.wager*bet.odds;}
       else if(bet.status==='lost')s.losses++;
+          else if(bet.status==='voided'){s.voided++;s.totalWagered-=bet.wager;}
       else s.pending++;
     });
   });
@@ -540,7 +547,7 @@ function renderLeaderboard(){
     return `<tr>
       <td data-label="Rank"><div class="rank-cell"><div class="rank-badge ${rankClasses[i]||'other'}">${i+1}</div>${player}</div></td>
       <td data-label="Wins">${s.wins}</td><td data-label="Losses">${s.losses}</td>
-      <td data-label="Pending">${s.pending}</td>
+      <td data-label="Voided">${s.voided}</td><td data-label="Pending">${s.pending}</td>
       <td data-label="Wagered">$${s.totalWagered.toFixed(2)}</td>
       <td data-label="Winnings">$${s.totalWinnings.toFixed(2)}</td>
       <td data-label="Net P&L" class="${profit>=0?'profit-positive':'profit-negative'}">${profit>=0?'+':''}$${profit.toFixed(2)}</td>

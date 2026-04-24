@@ -617,7 +617,7 @@ function renderCharts(){
       if(!bets.length)return;
       bets.forEach(b=>{
         if(b.status==='won')cumulative+=b.wager*b.odds-b.wager;
-        else if(b.status==='lost')cumulative-=b.wager;
+        else if(b.status==='lost'||b.status==='voided')cumulative-=b.wager;
       });
       labels.push('Rd '+r);
       values.push(parseFloat(cumulative.toFixed(2)));

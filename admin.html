@@ -353,7 +353,7 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
 .btn-voided{color:var(--voided-text);}
 .btn-voided:hover{background:var(--voided-bg);}
 /* PIN SCREEN */
-.pin-screen{position:fixed;top:0;left:0;right:0;bottom:0;width:100vw;height:100vh;background:#1e3a6e;z-index:99999;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.pin-screen{position:fixed;top:0;left:0;width:100%;height:100%;min-height:100vh;background:#1e3a6e;z-index:999999;display:flex;align-items:center;justify-content:center;overflow-y:auto;}
 .pin-box{background:var(--card);border-radius:16px;padding:2.5rem 2rem;width:100%;max-width:340px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3);}
 .pin-logo{width:80px;height:auto;border-radius:10px;margin:0 auto 1.25rem;box-shadow:0 0 0 3px var(--blue-mid);}
 .pin-title{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;text-transform:uppercase;letter-spacing:1px;color:var(--text-primary);margin-bottom:.25rem;}
@@ -391,7 +391,7 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
   .font-toggle .ft-large{font-size:12px;}
 }
 </style>
-</head><body style="overflow:hidden;">
+</head><body style="overflow:hidden;position:fixed;width:100%;">
 
 <div class="pin-screen" id="pinScreen">
   <div class="pin-box">
@@ -726,7 +726,7 @@ function renderCharts(){
       if(!bets.length)return;
       bets.forEach(b=>{
         if(b.status==='won')cumulative+=b.wager*b.odds-b.wager;
-        else if(b.status==='lost')cumulative-=b.wager;
+        else if(b.status==='lost'||b.status==='voided')cumulative-=b.wager;
       });
       labels.push('Rd '+r);
       values.push(parseFloat(cumulative.toFixed(2)));

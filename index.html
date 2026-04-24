@@ -531,7 +531,7 @@ function calculateStats(){
       s.totalWagered+=bet.wager;
       if(bet.status==='won'){s.wins++;s.totalWinnings+=bet.wager*bet.odds;}
       else if(bet.status==='lost')s.losses++;
-          else if(bet.status==='voided'){s.voided++;s.totalWagered-=bet.wager;}
+          else if(bet.status==='voided')s.voided++;
       else s.pending++;
     });
   });

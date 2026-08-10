@@ -687,7 +687,7 @@ function renderCharts(){
     const color=PLAYER_COLORS[player]||'#2563eb';
     const card=document.createElement('div');
     card.className='chart-card';
-    card.innerHTML=`<div class="chart-title">${player}<span style="color:${latest>=0?'var(--green)':'var(--red)};font-weight:800">${latest>=0?'+':''}$${latest.toFixed(2)}</span></div><div class="chart-canvas-wrap"><canvas id="chart-${player}"></canvas></div>`;
+    card.innerHTML=`<div class="chart-title">${player}<span style="color:${latest>=0?'var(--green)':'var(--red)'};font-weight:800">${latest>=0?'+':''}$${latest.toFixed(2)}</span></div><div class="chart-canvas-wrap"><canvas id="chart-${player}"></canvas></div>`;
     grid.appendChild(card);
     const ctx=document.getElementById(`chart-${player}`).getContext('2d');
     if(window.chartInstances[player])window.chartInstances[player].destroy();

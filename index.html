@@ -4,25 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sure Thing 2026 | Punters Club</title>
-  <link rel="manifest" href="/manifest.json">
-  <link rel="icon" type="image/png" href="/icon-192.png">
-  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="manifest" href="/sure-thing-2026/manifest.json">
+  <link rel="icon" type="image/png" href="/sure-thing-2026/icon-192.png">
+  <link rel="apple-touch-icon" href="/sure-thing-2026/icon-192.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Sure Thing">
   <meta name="theme-color" content="#1e3a6e">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-  <style>
-:root {
+  <style>:root {
   --blue:#2563eb;--blue-hover:#1d4ed8;--blue-light:#eff6ff;--blue-mid:#3b82f6;--blue-dark:#1e3a6e;
   --navy:#0f1f3d;--white:#ffffff;--off-white:#f4f7fb;--border:#dde4ef;--border-strong:#c3cfe0;
   --text-primary:#0f1f3d;--text-secondary:#3d5275;--text-muted:#7a93b4;
   --green:#16a34a;--green-bg:#f0fdf4;--green-border:#bbf7d0;
   --red:#dc2626;--red-bg:#fef2f2;--red-border:#fecaca;
   --pending-bg:#fffbeb;--pending-border:#fde68a;--pending-text:#b45309;
+  --voided-bg: #f5f3ff;
+  --voided-border: #ddd6fe;
+  --voided-text: #7c3aed;
   --card:#ffffff;--page-bg:#f4f7fb;--header-bg:#1e3a6e;--header-border:#3b82f6;
   --ticker-bg:#0f1f3d;--logo-sub:#93c5fd;--leaderboard-head:#1e3a6e;--lh-text:#93c5fd;
   --tab-inactive:#7a93b4;--stat-value:#0f1f3d;
@@ -117,6 +117,9 @@ header{background:var(--header-bg);border-bottom:3px solid var(--header-border);
 .bet-card.won .bet-card-top{background:var(--green-bg);}
 .bet-card.lost{border-color:var(--red-border);}
 .bet-card.lost .bet-card-top{background:var(--red-bg);}
+.bet-status-badge.voided{background:var(--voided-bg);color:var(--voided-text);border:1px solid var(--voided-border);}
+.bet-card.voided{border-color:var(--voided-border);}
+.bet-card.voided .bet-card-top{background:var(--voided-bg);}
 .bet-card-stats{display:flex;padding:.9rem 1.25rem;background:var(--off-white);}
 .bet-stat{flex:1;text-align:center;padding:.2rem 0;border-right:1px solid var(--border);}
 .bet-stat:last-child{border-right:none;}
@@ -322,11 +325,9 @@ body.large-text .profit-positive, body.large-text .profit-negative { font-size: 
 body.large-text .font-toggle .ft-small { opacity: 0.4; }
 body.large-text .font-toggle .ft-large { opacity: 1; text-decoration: underline; }
 body:not(.large-text) .font-toggle .ft-small { opacity: 1; text-decoration: underline; }
-body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
-
-</style>
+body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }</style>
 </head><body>
-<style>.spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite;}@keyframes spin{{to{{transform:rotate(360deg)}}}}@keyframes livepulse{{0%,100%{{opacity:1;transform:scale(1)}}50%{{opacity:.4;transform:scale(.8)}}}}.loading-screen{{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;gap:1rem;color:var(--text-muted);font-size:1.1rem;}}</style>
+<style>.spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite;}@keyframes spin{to{transform:rotate(360deg);}}@keyframes livepulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.8);}}.loading-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;gap:1rem;color:var(--text-muted);font-size:1.1rem;}</style>
 <div class="ticker-bar"><div class="ticker-inner"><span class="ticker-item"><span class="ticker-dot"></span>AFL 2026 SEASON</span><span class="ticker-item"><span class="ticker-dot"></span>SURE THING PUNTERS CLUB</span><span class="ticker-item"><span class="ticker-dot"></span>LIVE BETS & LEADERBOARD</span><span class="ticker-item"><span class="ticker-dot"></span>AUTO-REFRESHES EVERY 30 SECONDS</span><span class="ticker-item"><span class="ticker-dot"></span>BET RESPONSIBLY 18+</span><span class="ticker-item"><span class="ticker-dot"></span>AFL 2026 SEASON</span><span class="ticker-item"><span class="ticker-dot"></span>SURE THING PUNTERS CLUB</span><span class="ticker-item"><span class="ticker-dot"></span>LIVE BETS & LEADERBOARD</span><span class="ticker-item"><span class="ticker-dot"></span>AUTO-REFRESHES EVERY 30 SECONDS</span><span class="ticker-item"><span class="ticker-dot"></span>BET RESPONSIBLY 18+</span></div></div>
 <header>
   <div class="header-main">
@@ -360,19 +361,16 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
     <button class="tab-btn" data-tab="history" onclick="switchTab('history',this)">📋 History</button>
   </div>
   <div id="bets" class="tab-content active">
-    <div class="round-bar">
-      <span class="round-label">Round</span>
-      <select id="roundSelect" onchange="changeRound()"></select>
-    </div>
+    <div class="round-bar"><span class="round-label">Round</span><select id="roundSelect" onchange="changeRound()"></select></div>
     <div class="round-summary" id="roundSummary"></div>
     <div id="betsContainer"></div>
   </div>
   <div id="leaderboard" class="tab-content">
     <div class="section-heading">Current Standings</div>
-  <div class="leaderboard-wrap"><table class="leaderboard-table">
-    <thead><tr><th>Rank</th><th>Wins</th><th>Losses</th><th>Pending</th><th>Wagered</th><th>Winnings</th><th>Net P&amp;L</th></tr></thead>
-    <tbody id="leaderboardBody"></tbody>
-  </table></div>
+    <div class="leaderboard-wrap"><table class="leaderboard-table">
+      <thead><tr><th>Rank</th><th>Wins</th><th>Losses</th><th>Voided</th><th>Pending</th><th>Wagered</th><th>Winnings</th><th>Net P&amp;L</th></tr></thead>
+      <tbody id="leaderboardBody"></tbody>
+    </table></div>
   </div>
   <div id="simple" class="tab-content">
     <div class="section-heading">Rankings</div>
@@ -398,58 +396,46 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
     </div>
   </nav>
 <footer><p>Gamble responsibly. 18+ only. Gambling Help Online: 1800 858 858.</p></footer>
-
 <script>
-const SHOW_ACTIONS=false;
-const BIN_ID='69b5e9e8aa77b81da9e5a061';
-const ACCESS_KEY='$2a$10$c12XzPUx.P1ERe9qdRUuF.z/.mRgo0WxuJXFvakrHduch8tJV3SRe';
-const REFRESH_INTERVAL=30000;
+const SHOW_ACTIONS = false;
+const PUBLIC_DATA_URL = 'https://raw.githubusercontent.com/paulbarker82-dot/sure-thing-2026/main/data.json';
+const REFRESH_INTERVAL = 30000;
+
 
 const PLAYERS = ['Jon','Demam','Ahern','Planner','Barks'];
-const MAX_ROUNDS = 23;
+const MAX_ROUNDS = 24;
 const PLAYER_COLORS = {'Jon':'#2563eb','Demam':'#16a34a','Ahern':'#dc2626','Planner':'#9333ea','Barks':'#ea580c'};
 let data = {rounds:{}};
 let currentRound = 1;
 
 function initializeData(){for(let r=1;r<=MAX_ROUNDS;r++)if(!data.rounds[r])data.rounds[r]=[];}
 
-// ── THEME ──
-
-function initFontSize() {
-    if (localStorage.getItem('largeText') === '1') {
-        document.body.classList.add('large-text');
-    }
-}
-function toggleFontSize() {
-    const isLarge = document.body.classList.toggle('large-text');
-    localStorage.setItem('largeText', isLarge ? '1' : '0');
-    // re-render charts if visible so they resize correctly
-    if (window.chartInstances) {
-        Object.values(window.chartInstances).forEach(c => c && c.resize && c.resize());
-    }
-}
-
 function initTheme(){
-  const saved = localStorage.getItem('theme')||'light';
+  const saved=localStorage.getItem('theme')||'light';
   document.documentElement.setAttribute('data-theme',saved);
   updateThemeBtn(saved);
 }
 function toggleTheme(){
-  const cur = document.documentElement.getAttribute('data-theme')||'light';
-  const next = cur==='dark'?'light':'dark';
+  const cur=document.documentElement.getAttribute('data-theme')||'light';
+  const next=cur==='dark'?'light':'dark';
   document.documentElement.setAttribute('data-theme',next);
   localStorage.setItem('theme',next);
   updateThemeBtn(next);
-  if(window.chartInstances) Object.values(window.chartInstances).forEach(c=>c&&c.destroy&&c.destroy());
+  if(window.chartInstances)Object.values(window.chartInstances).forEach(c=>c&&c.destroy&&c.destroy());
   window.chartInstances={};
   renderCharts();
 }
 function updateThemeBtn(theme){
-  const btn = document.getElementById('themeToggle');
-  if(btn) btn.textContent = theme==='dark'?'☀️':'🌙';
+  const btn=document.getElementById('themeToggle');
+  if(btn)btn.textContent=theme==='dark'?'☀️':'🌙';
+}
+function initFontSize(){if(localStorage.getItem('largeText')==='1')document.body.classList.add('large-text');}
+function toggleFontSize(){
+  const isLarge=document.body.classList.toggle('large-text');
+  localStorage.setItem('largeText',isLarge?'1':'0');
+  if(window.chartInstances)Object.values(window.chartInstances).forEach(c=>c&&c.resize&&c.resize());
 }
 
-// ── TABS ──
 function switchTab(tabName,btn){
   document.querySelectorAll('.tab-content').forEach(el=>el.classList.remove('active'));
   document.querySelectorAll('.tab-btn,.bottom-nav-btn').forEach(el=>el.classList.remove('active'));
@@ -458,73 +444,70 @@ function switchTab(tabName,btn){
 }
 function changeRound(){currentRound=parseInt(document.getElementById('roundSelect').value);renderBets();renderSummary();}
 
-// ── ROUND SUMMARY ──
 function renderSummary(){
-  const bets = data.rounds[currentRound]||[];
-  const el = document.getElementById('roundSummary');
+  const bets=data.rounds[currentRound]||[];
+  const el=document.getElementById('roundSummary');
   if(!el)return;
   if(!bets.length){el.innerHTML='';return;}
-  const wagered = bets.reduce((s,b)=>s+b.wager,0);
-  const won = bets.filter(b=>b.status==='won');
-  const lost = bets.filter(b=>b.status==='lost');
-  const pending = bets.filter(b=>b.status==='pending');
-  const winnings = won.reduce((s,b)=>s+(b.wager*b.odds),0);
-  const netWon = winnings - won.reduce((s,b)=>s+b.wager,0) - lost.reduce((s,b)=>s+b.wager,0);
-  const bestBet = won.length ? won.reduce((a,b)=>(b.wager*b.odds)>(a.wager*a.odds)?b:a,won[0]) : null;
-  const netClass = netWon>0?'green':netWon<0?'red':'';
+  const wagered=bets.reduce((s,b)=>s+b.wager,0);
+  const won=bets.filter(b=>b.status==='won');
+  const lost=bets.filter(b=>b.status==='lost');
+  const voided=bets.filter(b=>b.status==='voided');
+  const pending=bets.filter(b=>b.status==='pending');
+  const winnings=won.reduce((s,b)=>s+(b.wager*b.odds),0);
+  const netWon=winnings-won.reduce((s,b)=>s+b.wager,0)-lost.reduce((s,b)=>s+b.wager,0)-voided.reduce((s,b)=>s+b.wager,0);
+  const bestBet=won.length?won.reduce((a,b)=>(b.wager*b.odds)>(a.wager*a.odds)?b:a,won[0]):null;
+  const netClass=netWon>0?'green':netWon<0?'red':'';
   el.innerHTML=`
     <div class="summary-card"><div class="summary-label">Total Wagered</div><div class="summary-value blue">$${wagered.toFixed(2)}</div></div>
     <div class="summary-card"><div class="summary-label">Bets Won</div><div class="summary-value green">${won.length}</div></div>
     <div class="summary-card"><div class="summary-label">Bets Lost</div><div class="summary-value red">${lost.length}</div></div>
+    <div class="summary-card"><div class="summary-label">Voided</div><div class="summary-value" style="color:var(--voided-text)">${voided.length}</div></div>
     <div class="summary-card"><div class="summary-label">Pending</div><div class="summary-value">${pending.length}</div></div>
     <div class="summary-card"><div class="summary-label">Net This Round</div><div class="summary-value ${netClass}">${netWon>=0?'+':''}$${netWon.toFixed(2)}</div></div>
     ${bestBet?`<div class="summary-card highlight"><div class="summary-label">🏆 Best Pick</div><div class="summary-value blue" style="font-size:1.1rem">${bestBet.player}</div><div class="summary-sub">${bestBet.betName.substring(0,30)}</div></div>`:''}
   `;
 }
 
-// ── BET CARDS ──
 function betCardHTML(bet,showActions){
-  const statusLabel = bet.status==='pending'?'⏳ Live':bet.status==='won'?'✓ Won':'✗ Lost';
-  const comment = bet.comment?`<div class="bet-comment">💬 ${bet.comment}</div>`:'';
-  const actions = showActions?`<div class="bet-card-actions">
+  const statusLabel=bet.status==='pending'?'⏳ Live':bet.status==='won'?'✓ Won':bet.status==='voided'?'∅ Voided':'✗ Lost';
+  const comment=bet.comment?`<div class="bet-comment">💬 ${bet.comment}</div>`:'';
+  const actions=showActions?`<div class="bet-card-actions">
     <button class="btn-won" onclick="updateBetStatus(${bet.id},'won')">✓ Won</button>
     <button class="btn-lost" onclick="updateBetStatus(${bet.id},'lost')">✗ Lost</button>
+    <button class="btn-voided" onclick="updateBetStatus(${bet.id},'voided')">∅ Void</button>
     <button class="btn-delete" onclick="deleteBet(${bet.id})">🗑 Delete</button>
   </div>`:'';
   return `<div class="bet-card ${bet.status} ${bet.status==='pending'?'pending-card':''}">
     <div class="bet-card-top">
-      <div class="bet-card-meta">
-        <span class="bet-player-tag">${bet.player}</span>
-        <span class="bet-status-badge ${bet.status}">${statusLabel}</span>
-      </div>
-      <div class="bet-name">${bet.betName}</div>
-      ${comment}
+      <div class="bet-card-meta"><span class="bet-player-tag">${bet.player}</span><span class="bet-status-badge ${bet.status}">${statusLabel}</span></div>
+      <div class="bet-name">${bet.betName}</div>${comment}
     </div>
     <div class="bet-card-stats">
       <div class="bet-stat"><div class="bet-stat-label">Wager</div><div class="bet-stat-value">$${bet.wager.toFixed(2)}</div></div>
       <div class="bet-stat"><div class="bet-stat-label">Odds</div><div class="bet-stat-value">${bet.odds.toFixed(2)}</div></div>
       <div class="bet-stat"><div class="bet-stat-label">To Win</div><div class="bet-stat-value">$${(bet.wager*bet.odds).toFixed(2)}</div></div>
-    </div>
-    ${actions}
+    </div>${actions}
   </div>`;
 }
 
 function renderBets(){
-  const container = document.getElementById('betsContainer');
-  const bets = data.rounds[currentRound]||[];
+  const container=document.getElementById('betsContainer');
+  const bets=data.rounds[currentRound]||[];
   if(!bets.length){container.innerHTML='<div class="empty-state"><div class="empty-state-icon">🎯</div><p>No bets placed this round yet.</p></div>';return;}
   container.innerHTML=`<div class="bets-grid">${bets.map(b=>betCardHTML(b,SHOW_ACTIONS)).join('')}</div>`;
 }
 
 function calculateStats(){
   const stats={};
-  PLAYERS.forEach(p=>{stats[p]={wins:0,losses:0,pending:0,totalWagered:0,totalWinnings:0};});
+  PLAYERS.forEach(p=>{stats[p]={wins:0,losses:0,voided:0,pending:0,totalWagered:0,totalWinnings:0};});
   Object.values(data.rounds).forEach(bets=>{
     bets.forEach(bet=>{
       const s=stats[bet.player];
       s.totalWagered+=bet.wager;
       if(bet.status==='won'){s.wins++;s.totalWinnings+=bet.wager*bet.odds;}
       else if(bet.status==='lost')s.losses++;
+      else if(bet.status==='voided')s.voided++;
       else s.pending++;
     });
   });
@@ -540,7 +523,7 @@ function renderLeaderboard(){
     return `<tr>
       <td data-label="Rank"><div class="rank-cell"><div class="rank-badge ${rankClasses[i]||'other'}">${i+1}</div>${player}</div></td>
       <td data-label="Wins">${s.wins}</td><td data-label="Losses">${s.losses}</td>
-      <td data-label="Pending">${s.pending}</td>
+      <td data-label="Voided">${s.voided}</td><td data-label="Pending">${s.pending}</td>
       <td data-label="Wagered">$${s.totalWagered.toFixed(2)}</td>
       <td data-label="Winnings">$${s.totalWinnings.toFixed(2)}</td>
       <td data-label="Net P&L" class="${profit>=0?'profit-positive':'profit-negative'}">${profit>=0?'+':''}$${profit.toFixed(2)}</td>
@@ -548,30 +531,24 @@ function renderLeaderboard(){
   }).join('');
 }
 
-
-function renderSimpleLeaderboard() {
-    const el = document.getElementById('simpleLeaderboardList');
-    if (!el) return;
-    const stats = calculateStats();
-    const rankClasses = ['first','second','third','',''];
-    const sorted = [...PLAYERS].sort((a,b) =>
-        (stats[b].totalWinnings - stats[b].totalWagered) -
-        (stats[a].totalWinnings - stats[a].totalWagered)
-    );
-    el.innerHTML = sorted.map((player, i) => {
-        const s = stats[player];
-        const profit = s.totalWinnings - s.totalWagered;
-        const profitClass = profit > 0 ? 'pos' : profit < 0 ? 'neg' : 'zero';
-        const profitStr = (profit >= 0 ? '+' : '') + '$' + profit.toFixed(2);
-        return `<div class="simple-lb-card ${rankClasses[i]}">
-            <div class="simple-lb-rank">${i + 1}</div>
-            <div class="simple-lb-info">
-                <div class="simple-lb-name">${player}</div>
-                <div class="simple-lb-record">${s.wins}W &nbsp;${s.losses}L &nbsp;${s.pending} pending</div>
-            </div>
-            <div class="simple-lb-profit ${profitClass}">${profitStr}</div>
-        </div>`;
-    }).join('');
+function renderSimpleLeaderboard(){
+  const el=document.getElementById('simpleLeaderboardList');
+  if(!el)return;
+  const stats=calculateStats();
+  const rankClasses=['first','second','third','',''];
+  const sorted=[...PLAYERS].sort((a,b)=>(stats[b].totalWinnings-stats[b].totalWagered)-(stats[a].totalWinnings-stats[a].totalWagered));
+  el.innerHTML=sorted.map((player,i)=>{
+    const s=stats[player],profit=s.totalWinnings-s.totalWagered;
+    const profitClass=profit>0?'pos':profit<0?'neg':'zero';
+    return `<div class="simple-lb-card ${rankClasses[i]}">
+      <div class="simple-lb-rank">${i+1}</div>
+      <div class="simple-lb-info">
+        <div class="simple-lb-name">${player}</div>
+        <div class="simple-lb-record">${s.wins}W ${s.losses}L ${s.voided>0?'∅'+s.voided+' ':''}&nbsp;${s.pending} pending</div>
+      </div>
+      <div class="simple-lb-profit ${profitClass}">${profit>=0?'+':''}$${profit.toFixed(2)}</div>
+    </div>`;
+  }).join('');
 }
 
 function renderHistory(){
@@ -585,71 +562,49 @@ function renderHistory(){
     </div>`).join('');
 }
 
-// ── CHARTS ──
 window.chartInstances={};
 function renderCharts(){
-  const wrap = document.getElementById('chartsContainer');
+  const wrap=document.getElementById('chartsContainer');
   if(!wrap)return;
-  const isDark = document.documentElement.getAttribute('data-theme')==='dark';
-  const gridColor = isDark?'rgba(255,255,255,.08)':'rgba(0,0,0,.06)';
-  const textColor = isDark?'#94a3b8':'#3d5275';
-
-  const rounds = Object.keys(data.rounds).map(Number).filter(r=>data.rounds[r].length>0).sort((a,b)=>a-b);
+  const isDark=document.documentElement.getAttribute('data-theme')==='dark';
+  const gridColor=isDark?'rgba(255,255,255,.08)':'rgba(0,0,0,.06)';
+  const textColor=isDark?'#94a3b8':'#3d5275';
+  const rounds=Object.keys(data.rounds).map(Number).filter(r=>data.rounds[r].length>0).sort((a,b)=>a-b);
   if(!rounds.length){wrap.innerHTML='<div class="empty-state"><div class="empty-state-icon">📈</div><p>No data yet — add some bets first!</p></div>';return;}
-
   wrap.innerHTML='<div class="charts-grid" id="chartsGrid"></div>';
-  const grid = document.getElementById('chartsGrid');
-
+  const grid=document.getElementById('chartsGrid');
   PLAYERS.forEach(player=>{
-    // Build cumulative profit per round
     let cumulative=0;
-    const labels=[];
-    const values=[];
+    const labels=[],values=[];
     rounds.forEach(r=>{
       const bets=(data.rounds[r]||[]).filter(b=>b.player===player);
       if(!bets.length)return;
       bets.forEach(b=>{
         if(b.status==='won')cumulative+=b.wager*b.odds-b.wager;
-        else if(b.status==='lost')cumulative-=b.wager;
+        else if(b.status==='lost'||b.status==='voided')cumulative-=b.wager;
       });
       labels.push('Rd '+r);
       values.push(parseFloat(cumulative.toFixed(2)));
     });
-
     if(!labels.length)return;
     const latest=values[values.length-1]||0;
     const color=PLAYER_COLORS[player]||'#2563eb';
-    const profitClass=latest>=0?'green':latest<0?'red':'';
-
     const card=document.createElement('div');
     card.className='chart-card';
-    card.innerHTML=`<div class="chart-title">${player}<span class="${profitClass}" style="color:${latest>=0?'var(--green)':'var(--red)'}">${latest>=0?'+':''}$${latest.toFixed(2)}</span></div><div class="chart-canvas-wrap"><canvas id="chart-${player}"></canvas></div>`;
+    card.innerHTML=`<div class="chart-title">${player}<span style="color:${latest>=0?'var(--green)':'var(--red)};font-weight:800">${latest>=0?'+':''}$${latest.toFixed(2)}</span></div><div class="chart-canvas-wrap"><canvas id="chart-${player}"></canvas></div>`;
     grid.appendChild(card);
-
     const ctx=document.getElementById(`chart-${player}`).getContext('2d');
     if(window.chartInstances[player])window.chartInstances[player].destroy();
     window.chartInstances[player]=new Chart(ctx,{
       type:'line',
-      data:{
-        labels,
-        datasets:[{
-          data:values,
-          borderColor:color,
-          backgroundColor:color+'22',
-          borderWidth:2.5,
-          pointBackgroundColor:color,
-          pointRadius:4,
-          tension:.35,
-          fill:true
-        }]
-      },
+      data:{labels,datasets:[{data:values,borderColor:color,backgroundColor:color+'22',borderWidth:2.5,pointBackgroundColor:color,pointRadius:4,tension:.35,fill:true}]},
       options:{
         responsive:true,maintainAspectRatio:false,
         plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`$${ctx.raw>=0?'+':''}${ctx.raw}`}}},
         scales:{
           x:{grid:{color:gridColor},ticks:{color:textColor,font:{family:'Barlow Condensed',size:11,weight:'700'}}},
-          y:{grid:{color:gridColor},ticks:{color:textColor,font:{family:'Barlow Condensed',size:11},callback:v=>`$${v}`},
-            afterDataLimits(scale){const r=Math.max(Math.abs(scale.min),Math.abs(scale.max));scale.min=-r*1.2;scale.max=r*1.2;}
+          y:{grid:{color:gridColor},ticks:{color:textColor,callback:v=>`$${v}`},
+            afterDataLimits(scale){const r=Math.max(Math.abs(scale.min),Math.abs(scale.max),10);scale.min=-r*1.2;scale.max=r*1.2;}
           }
         }
       }
@@ -663,23 +618,24 @@ function initRoundSelector(){
 }
 function render(){renderBets();renderSummary();renderLeaderboard();renderSimpleLeaderboard();renderHistory();renderCharts();}
 
+
 async function fetchData(){
-  const binId=localStorage.getItem('public_jsonbin_id')||BIN_ID;
-  const apiKey=localStorage.getItem('public_jsonbin_key')||ACCESS_KEY;
-  if(!binId||binId==='YOUR_BIN_ID_HERE'){document.getElementById('loadingScreen').innerHTML='<div class="empty-state"><div class="empty-state-icon">⚙️</div><p>Site not configured yet.</p></div>';return;}
   try{
-    const res=await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`,{headers:{'X-Access-Key':apiKey}});
+    const res=await fetch(PUBLIC_DATA_URL+'?t='+Date.now());
     if(!res.ok)throw new Error('HTTP '+res.status);
     const json=await res.json();
-    if(json.record&&json.record.rounds)data=json.record;
+    if(json&&json.rounds)data=json;
     initializeData();
     document.getElementById('loadingScreen').style.display='none';
     document.getElementById('mainContent').style.display='block';
     render();
     document.getElementById('lastUpdated').textContent='Updated '+new Date().toLocaleTimeString('en-AU',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
-  }catch(e){document.getElementById('loadingScreen').innerHTML='<div class="empty-state"><div class="empty-state-icon">⚠️</div><p>Could not load data.<br>Please try again shortly.</p></div>';console.error(e);}
+  }catch(e){
+    document.getElementById('loadingScreen').innerHTML='<div class="empty-state"><div class="empty-state-icon">⚠️</div><p>Could not load data.<br>Please try again shortly.</p></div>';
+    console.error(e);
+  }
 }
-window.addEventListener('load',()=>{initTheme(); initFontSize();initRoundSelector();fetchData();setInterval(fetchData,REFRESH_INTERVAL);});
+window.addEventListener('load',()=>{initTheme();initFontSize();initRoundSelector();fetchData();setInterval(fetchData,REFRESH_INTERVAL);});
 </script>
-<script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/service-worker.js'));</script>
+<script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/sure-thing-2026/service-worker.js'));</script>
 </body></html>

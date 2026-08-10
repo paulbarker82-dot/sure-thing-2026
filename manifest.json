@@ -2,7 +2,7 @@
   "name": "Sure Thing 2026",
   "short_name": "Sure Thing",
   "description": "AFL Punters Club – Bet Tracker & Leaderboard",
-  "start_url": "/",
+  "start_url": "/public.html",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f4f7fb",

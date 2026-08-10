@@ -4,25 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sure Thing 2026 | Admin</title>
-  <link rel="manifest" href="/manifest.json">
-  <link rel="icon" type="image/png" href="/icon-192.png">
-  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="manifest" href="/sure-thing-2026/manifest.json">
+  <link rel="icon" type="image/png" href="/sure-thing-2026/icon-192.png">
+  <link rel="apple-touch-icon" href="/sure-thing-2026/icon-192.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Sure Thing">
   <meta name="theme-color" content="#1e3a6e">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-  <style>
-:root {
+  <style>:root {
   --blue:#2563eb;--blue-hover:#1d4ed8;--blue-light:#eff6ff;--blue-mid:#3b82f6;--blue-dark:#1e3a6e;
   --navy:#0f1f3d;--white:#ffffff;--off-white:#f4f7fb;--border:#dde4ef;--border-strong:#c3cfe0;
   --text-primary:#0f1f3d;--text-secondary:#3d5275;--text-muted:#7a93b4;
   --green:#16a34a;--green-bg:#f0fdf4;--green-border:#bbf7d0;
   --red:#dc2626;--red-bg:#fef2f2;--red-border:#fecaca;
   --pending-bg:#fffbeb;--pending-border:#fde68a;--pending-text:#b45309;
+  --voided-bg: #f5f3ff;
+  --voided-border: #ddd6fe;
+  --voided-text: #7c3aed;
   --card:#ffffff;--page-bg:#f4f7fb;--header-bg:#1e3a6e;--header-border:#3b82f6;
   --ticker-bg:#0f1f3d;--logo-sub:#93c5fd;--leaderboard-head:#1e3a6e;--lh-text:#93c5fd;
   --tab-inactive:#7a93b4;--stat-value:#0f1f3d;
@@ -64,7 +64,7 @@ header{background:var(--header-bg);border-bottom:3px solid var(--header-border);
 .btn-ghost:hover{background:rgba(255,255,255,.18);color:white;}
 .btn-sm{padding:.5rem 1rem;font-size:.9rem;}
 /* CONTAINER */
-.container{max-width:1400px;margin:0 auto;padding:1.5rem;padding-bottom:8rem;}
+.container{max-width:1400px;margin:0 auto;padding:1.5rem;padding-bottom:5rem;}
 /* TABS — desktop */
 .tabs{display:flex;gap:0;margin-bottom:1.5rem;background:var(--card);border-radius:8px;padding:4px;border:1.5px solid var(--border);width:fit-content;box-shadow:0 1px 4px rgba(0,0,0,.06);}
 .tab-btn{padding:.7rem 1.6rem;background:transparent;border:none;border-radius:6px;color:var(--tab-inactive);cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;}
@@ -117,6 +117,9 @@ header{background:var(--header-bg);border-bottom:3px solid var(--header-border);
 .bet-card.won .bet-card-top{background:var(--green-bg);}
 .bet-card.lost{border-color:var(--red-border);}
 .bet-card.lost .bet-card-top{background:var(--red-bg);}
+.bet-status-badge.voided{background:var(--voided-bg);color:var(--voided-text);border:1px solid var(--voided-border);}
+.bet-card.voided{border-color:var(--voided-border);}
+.bet-card.voided .bet-card-top{background:var(--voided-bg);}
 .bet-card-stats{display:flex;padding:.9rem 1.25rem;background:var(--off-white);}
 .bet-stat{flex:1;text-align:center;padding:.2rem 0;border-right:1px solid var(--border);}
 .bet-stat:last-child{border-right:none;}
@@ -196,42 +199,6 @@ footer a:hover{color:var(--blue);}
 ::-webkit-scrollbar-track{background:var(--off-white);}
 ::-webkit-scrollbar-thumb{background:rgba(37,99,235,.3);border-radius:3px;}
 ::-webkit-scrollbar-thumb:hover{background:var(--blue);}
-
-.form-section{background:var(--card);border:1.5px solid var(--border);border-top:3px solid var(--blue);border-radius:10px;padding:1.5rem;margin-bottom:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
-.form-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;}
-.form-header-icon{width:34px;height:34px;background:var(--blue);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
-.form-header h2{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--text-primary);}
-.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:1.25rem;}
-.form-group{display:flex;flex-direction:column;gap:.4rem;}
-.form-group label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.9rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;}
-.form-group input,.form-group select{padding:.75rem .9rem;background:var(--off-white);color:var(--text-primary);border:1.5px solid var(--border-strong);border-radius:6px;font-family:'Barlow',sans-serif;font-size:1rem;transition:border-color .2s;}
-.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.12);background:var(--white);}
-.form-group input::placeholder{color:var(--text-muted);}
-.sync-status{display:flex;align-items:center;gap:.5rem;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:.4rem .9rem;border-radius:6px;border:1.5px solid;}
-.sync-status.synced{color:var(--green);border-color:var(--green-border);background:var(--green-bg);}
-.sync-status.syncing{color:var(--pending-text);border-color:var(--pending-border);background:var(--pending-bg);}
-.sync-status.error{color:var(--red);border-color:var(--red-border);background:var(--red-bg);}
-.sync-dot{width:8px;height:8px;border-radius:50%;background:currentColor;}
-.sync-dot.pulse{animation:pulse 1.5s infinite;}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.admin-badge{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.2);color:#93c5fd;font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:800;letter-spacing:2px;padding:.3rem .75rem;border-radius:4px;text-transform:uppercase;}
-/* PIN SCREEN */
-.pin-screen{position:fixed;inset:0;background:var(--blue-dark);z-index:9999;display:flex;align-items:center;justify-content:center;}
-.pin-box{background:var(--card);border-radius:16px;padding:2.5rem 2rem;width:100%;max-width:340px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3);}
-.pin-logo{width:80px;height:auto;border-radius:10px;margin-bottom:1.25rem;box-shadow:0 0 0 3px var(--blue-mid);}
-.pin-title{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;text-transform:uppercase;letter-spacing:1px;color:var(--text-primary);margin-bottom:.25rem;}
-.pin-sub{font-size:.9rem;color:var(--text-muted);margin-bottom:1.5rem;}
-.pin-dots{display:flex;justify-content:center;gap:.75rem;margin-bottom:1.5rem;}
-.pin-dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--border-strong);background:transparent;transition:all .15s;}
-.pin-dot.filled{background:var(--blue);border-color:var(--blue);}
-.pin-dot.error{background:var(--red);border-color:var(--red);}
-.pin-keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1rem;}
-.pin-key{padding:1rem;background:var(--off-white);border:1.5px solid var(--border);border-radius:10px;font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;color:var(--text-primary);cursor:pointer;transition:all .15s;}
-.pin-key:hover{background:var(--blue-light);border-color:var(--blue);}
-.pin-key:active{transform:scale(.95);}
-.pin-key.del{font-size:1.1rem;color:var(--text-muted);}
-.pin-error{color:var(--red);font-size:.85rem;min-height:1.2rem;margin-top:.25rem;}
-@media(max-width:768px){.form-grid{grid-template-columns:1fr;}}
 
 /* FONT SIZE TOGGLE */
 body { font-size: 16px; }
@@ -359,10 +326,52 @@ body.large-text .font-toggle .ft-small { opacity: 0.4; }
 body.large-text .font-toggle .ft-large { opacity: 1; text-decoration: underline; }
 body:not(.large-text) .font-toggle .ft-small { opacity: 1; text-decoration: underline; }
 body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
-
+.form-section{background:var(--card);border:1.5px solid var(--border);border-top:3px solid var(--blue);border-radius:10px;padding:1.5rem;margin-bottom:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.form-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;}
+.form-header-icon{width:34px;height:34px;background:var(--blue);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.form-header h2{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--text-primary);}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:1.25rem;}
+.form-group{display:flex;flex-direction:column;gap:.4rem;}
+.form-group label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.9rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;}
+.form-group input,.form-group select{padding:.75rem .9rem;background:var(--off-white);color:var(--text-primary);border:1.5px solid var(--border-strong);border-radius:6px;font-family:'Barlow',sans-serif;font-size:1rem;transition:border-color .2s;}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.12);background:var(--white);}
+.form-group input::placeholder{color:var(--text-muted);}
+.sync-status{display:flex;align-items:center;gap:.5rem;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:.4rem .9rem;border-radius:6px;border:1.5px solid;white-space:nowrap;}
+.sync-status.synced{color:var(--green);border-color:var(--green-border);background:var(--green-bg);}
+.sync-status.syncing{color:var(--pending-text);border-color:var(--pending-border);background:var(--pending-bg);}
+.sync-status.error{color:var(--red);border-color:var(--red-border);background:var(--red-bg);}
+.sync-dot{width:8px;height:8px;border-radius:50%;background:currentColor;flex-shrink:0;}
+.sync-dot.pulse{animation:syncpulse 1.5s infinite;}
+@keyframes syncpulse{0%,100%{opacity:1}50%{opacity:.3}}
+.admin-badge{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.2);color:#93c5fd;font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:800;letter-spacing:2px;padding:.3rem .75rem;border-radius:4px;text-transform:uppercase;white-space:nowrap;}
+.btn-voided{color:var(--voided-text);}
+.btn-voided:hover{background:var(--voided-bg);}
+/* PIN SCREEN */
+.pin-screen{position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e3a6e;z-index:999999;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.pin-box{background:var(--card);border-radius:16px;padding:2rem 1.5rem;width:90%;max-width:320px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.4);}
+.pin-logo{width:72px;height:auto;border-radius:10px;margin:0 auto 1rem;display:block;box-shadow:0 0 0 3px var(--blue-mid);}
+.pin-title{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;text-transform:uppercase;letter-spacing:1px;color:var(--text-primary);margin-bottom:.2rem;}
+.pin-sub{font-size:.9rem;color:var(--text-muted);margin-bottom:1.25rem;}
+.pin-dots{display:flex;justify-content:center;gap:.6rem;margin-bottom:1.25rem;}
+.pin-dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--border-strong);background:transparent;transition:all .15s;}
+.pin-dot.filled{background:var(--blue);border-color:var(--blue);}
+.pin-dot.error{background:var(--red);border-color:var(--red);}
+.pin-keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:.75rem;}
+.pin-key{padding:.85rem;background:var(--off-white);border:1.5px solid var(--border);border-radius:10px;font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;color:var(--text-primary);cursor:pointer;transition:all .15s;-webkit-tap-highlight-color:transparent;}
+.pin-key:hover,.pin-key:active{background:var(--blue-light);border-color:var(--blue);transform:scale(.96);}
+.pin-key.del{font-size:1.1rem;color:var(--text-muted);}
+.pin-error{color:var(--red);font-size:.85rem;min-height:1.2rem;}
+/* SETUP BANNER */
+.setup-banner{background:var(--blue-light);border:1.5px solid #bfdbfe;border-left:4px solid var(--blue);border-radius:8px;padding:1.1rem 1.25rem;margin-bottom:1.5rem;}
+.setup-banner h3{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--blue);margin-bottom:.5rem;}
+.setup-banner p{font-size:.95rem;color:var(--text-secondary);margin-bottom:.75rem;line-height:1.6;}
+.setup-row{display:flex;gap:.75rem;flex-wrap:wrap;}
+.setup-input{flex:1;min-width:260px;padding:.65rem .9rem;background:var(--white);color:var(--text-primary);border:1.5px solid var(--border-strong);border-radius:6px;font-family:'Barlow',sans-serif;font-size:.95rem;}
+.setup-input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.12);}
+@media(max-width:768px){.form-grid{grid-template-columns:1fr;}}
 </style>
-</head><body>
-
+</head>
+<body>
 <!-- PIN SCREEN -->
 <div class="pin-screen" id="pinScreen">
   <div class="pin-box">
@@ -375,14 +384,23 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
       <div class="pin-dot" id="pd4"></div><div class="pin-dot" id="pd5"></div>
     </div>
     <div class="pin-keypad">
-      <button class="pin-key" onclick="pinPress(1)">1</button><button class="pin-key" onclick="pinPress(2)">2</button><button class="pin-key" onclick="pinPress(3)">3</button><button class="pin-key" onclick="pinPress(4)">4</button><button class="pin-key" onclick="pinPress(5)">5</button><button class="pin-key" onclick="pinPress(6)">6</button><button class="pin-key" onclick="pinPress(7)">7</button><button class="pin-key" onclick="pinPress(8)">8</button><button class="pin-key" onclick="pinPress(9)">9</button>
+      <button class="pin-key" onclick="pinPress(1)">1</button>
+      <button class="pin-key" onclick="pinPress(2)">2</button>
+      <button class="pin-key" onclick="pinPress(3)">3</button>
+      <button class="pin-key" onclick="pinPress(4)">4</button>
+      <button class="pin-key" onclick="pinPress(5)">5</button>
+      <button class="pin-key" onclick="pinPress(6)">6</button>
+      <button class="pin-key" onclick="pinPress(7)">7</button>
+      <button class="pin-key" onclick="pinPress(8)">8</button>
+      <button class="pin-key" onclick="pinPress(9)">9</button>
+      <button class="pin-key" style="visibility:hidden;"></button>
       <button class="pin-key" onclick="pinPress(0)">0</button>
       <button class="pin-key del" onclick="pinDel()">⌫</button>
     </div>
     <div class="pin-error" id="pinError"></div>
   </div>
 </div>
-<div class="ticker-bar"><div class="ticker-inner"><span class="ticker-item"><span class="ticker-dot"></span>ADMIN PANEL</span><span class="ticker-item"><span class="ticker-dot"></span>SURE THING 2026</span><span class="ticker-item"><span class="ticker-dot"></span>AFL BETTING TRACKER</span><span class="ticker-item"><span class="ticker-dot"></span>SYNCS TO LIVE SITE INSTANTLY</span><span class="ticker-item"><span class="ticker-dot"></span>BET RESPONSIBLY 18+</span><span class="ticker-item"><span class="ticker-dot"></span>ADMIN PANEL</span><span class="ticker-item"><span class="ticker-dot"></span>SURE THING 2026</span><span class="ticker-item"><span class="ticker-dot"></span>AFL BETTING TRACKER</span><span class="ticker-item"><span class="ticker-dot"></span>SYNCS TO LIVE SITE INSTANTLY</span><span class="ticker-item"><span class="ticker-dot"></span>BET RESPONSIBLY 18+</span></div></div>
+<div class="ticker-bar"><div class="ticker-inner"><span class="ticker-item"><span class="ticker-dot"></span>ADMIN PANEL</span><span class="ticker-item"><span class="ticker-dot"></span>SURE THING 2026</span><span class="ticker-item"><span class="ticker-dot"></span>AFL BETTING TRACKER</span><span class="ticker-item"><span class="ticker-dot"></span>SYNCS TO GITHUB INSTANTLY</span><span class="ticker-item"><span class="ticker-dot"></span>BET RESPONSIBLY 18+</span><span class="ticker-item"><span class="ticker-dot"></span>ADMIN PANEL</span><span class="ticker-item"><span class="ticker-dot"></span>SURE THING 2026</span><span class="ticker-item"><span class="ticker-dot"></span>AFL BETTING TRACKER</span><span class="ticker-item"><span class="ticker-dot"></span>SYNCS TO GITHUB INSTANTLY</span><span class="ticker-item"><span class="ticker-dot"></span>BET RESPONSIBLY 18+</span></div></div>
 <header>
   <div class="header-main">
     <div class="logo-section">
@@ -396,7 +414,7 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
       <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
       <button class="font-toggle" id="fontToggle" onclick="toggleFontSize()" title="Toggle font size"><span class="ft-small">A</span><span class="ft-divider">/</span><span class="ft-large">A</span></button>
       <span class="admin-badge">🔐 Admin</span>
-      <button class="btn btn-ghost" onclick="exportData()" style="font-size:.85rem;padding:.4rem .9rem;border-color:rgba(255,255,255,.2);color:#e2e8f0;border-radius:6px;">📥 Export CSV</button>
+      <button class="btn btn-ghost" onclick="exportData()" style="font-size:.85rem;padding:.4rem .9rem;border-color:rgba(255,255,255,.2);color:#e2e8f0;border-radius:6px;">📥 CSV</button>
       <div class="sync-status syncing" id="syncStatus">
         <span class="sync-dot pulse" id="syncDot"></span>
         <span id="syncText">Not configured</span>
@@ -406,14 +424,12 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
 </header>
 <div class="container">
   <div class="setup-banner" id="setupBanner">
-    <h3>⚙️ JSONBin Setup</h3>
-    <p>1. Go to <strong>jsonbin.io</strong> → Bins → <strong>Create a Bin</strong> → type <code>{"rounds":{}}</code> → Save Bin.<br>
-       2. Copy the <strong>Bin ID</strong>. Go to <strong>Account → API Keys</strong> → copy your <strong>Master Key</strong>.<br>
-       3. Paste both below.</p>
+    <h3>⚙️ GitHub Setup Required</h3>
+    <p>Paste your <strong>GitHub Personal Access Token</strong> below to connect. You only need to do this once.<br>
+    <small>Generate one at: GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token → tick <strong>repo</strong> scope.</small></p>
     <div class="setup-row">
-      <input class="setup-input" id="inputBinId" placeholder="Bin ID">
-      <input class="setup-input" id="inputApiKey" placeholder="Master Key  $2a$10$...">
-      <button class="btn btn-cta btn-sm" onclick="saveConfig()">Save &amp; Connect</button>
+      <input class="setup-input" id="inputToken" placeholder="GitHub token  e.g. ghp_xxxxxxxxxxxx">
+      <button class="btn btn-cta btn-sm" onclick="saveConfig()">Connect</button>
     </div>
   </div>
   <div class="tabs">
@@ -446,10 +462,10 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
   </div>
   <div id="leaderboard" class="tab-content">
     <div class="section-heading">Current Standings</div>
-  <div class="leaderboard-wrap"><table class="leaderboard-table">
-    <thead><tr><th>Rank</th><th>Wins</th><th>Losses</th><th>Pending</th><th>Wagered</th><th>Winnings</th><th>Net P&amp;L</th></tr></thead>
-    <tbody id="leaderboardBody"></tbody>
-  </table></div>
+    <div class="leaderboard-wrap"><table class="leaderboard-table">
+      <thead><tr><th>Rank</th><th>Wins</th><th>Losses</th><th>Voided</th><th>Pending</th><th>Wagered</th><th>Winnings</th><th>Net P&amp;L</th></tr></thead>
+      <tbody id="leaderboardBody"></tbody>
+    </table></div>
   </div>
   <div id="simple" class="tab-content">
     <div class="section-heading">Rankings</div>
@@ -473,58 +489,49 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
       <button class="bottom-nav-btn" data-tab="history" onclick="switchTab('history',this)"><span class="nav-icon">📋</span>History</button>
     </div>
   </nav>
-<footer><p>Gamble responsibly. 18+ only. Gambling Help Online: 1800 858 858. &nbsp;|&nbsp; <a href="#" onclick="exportData();return false;">Export CSV</a> &nbsp;|&nbsp; <a href="#" onclick="resetAllData();return false;">Reset All Data</a></p></footer>
-
+<footer><p>Gamble responsibly. 18+ only. Gambling Help Online: 1800 858 858. &nbsp;|&nbsp; <a href="#" onclick="resetAllData();return false;">Reset All Data</a></p></footer>
 <script>
-const SHOW_ACTIONS=true;
-let BIN_ID='',API_KEY='';
-const CORRECT_PIN='123456';
+const SHOW_ACTIONS = true;
+const GITHUB_API_URL = 'https://api.github.com/repos/paulbarker82-dot/sure-thing-2026/contents/data.json';
+const GITHUB_BRANCH = 'main';
+let GITHUB_TOKEN = '';
+let fileSha = '';
+
 
 const PLAYERS = ['Jon','Demam','Ahern','Planner','Barks'];
-const MAX_ROUNDS = 23;
+const MAX_ROUNDS = 24;
 const PLAYER_COLORS = {'Jon':'#2563eb','Demam':'#16a34a','Ahern':'#dc2626','Planner':'#9333ea','Barks':'#ea580c'};
 let data = {rounds:{}};
 let currentRound = 1;
 
 function initializeData(){for(let r=1;r<=MAX_ROUNDS;r++)if(!data.rounds[r])data.rounds[r]=[];}
 
-// ── THEME ──
-
-function initFontSize() {
-    if (localStorage.getItem('largeText') === '1') {
-        document.body.classList.add('large-text');
-    }
-}
-function toggleFontSize() {
-    const isLarge = document.body.classList.toggle('large-text');
-    localStorage.setItem('largeText', isLarge ? '1' : '0');
-    // re-render charts if visible so they resize correctly
-    if (window.chartInstances) {
-        Object.values(window.chartInstances).forEach(c => c && c.resize && c.resize());
-    }
-}
-
 function initTheme(){
-  const saved = localStorage.getItem('theme')||'light';
+  const saved=localStorage.getItem('theme')||'light';
   document.documentElement.setAttribute('data-theme',saved);
   updateThemeBtn(saved);
 }
 function toggleTheme(){
-  const cur = document.documentElement.getAttribute('data-theme')||'light';
-  const next = cur==='dark'?'light':'dark';
+  const cur=document.documentElement.getAttribute('data-theme')||'light';
+  const next=cur==='dark'?'light':'dark';
   document.documentElement.setAttribute('data-theme',next);
   localStorage.setItem('theme',next);
   updateThemeBtn(next);
-  if(window.chartInstances) Object.values(window.chartInstances).forEach(c=>c&&c.destroy&&c.destroy());
+  if(window.chartInstances)Object.values(window.chartInstances).forEach(c=>c&&c.destroy&&c.destroy());
   window.chartInstances={};
   renderCharts();
 }
 function updateThemeBtn(theme){
-  const btn = document.getElementById('themeToggle');
-  if(btn) btn.textContent = theme==='dark'?'☀️':'🌙';
+  const btn=document.getElementById('themeToggle');
+  if(btn)btn.textContent=theme==='dark'?'☀️':'🌙';
+}
+function initFontSize(){if(localStorage.getItem('largeText')==='1')document.body.classList.add('large-text');}
+function toggleFontSize(){
+  const isLarge=document.body.classList.toggle('large-text');
+  localStorage.setItem('largeText',isLarge?'1':'0');
+  if(window.chartInstances)Object.values(window.chartInstances).forEach(c=>c&&c.resize&&c.resize());
 }
 
-// ── TABS ──
 function switchTab(tabName,btn){
   document.querySelectorAll('.tab-content').forEach(el=>el.classList.remove('active'));
   document.querySelectorAll('.tab-btn,.bottom-nav-btn').forEach(el=>el.classList.remove('active'));
@@ -533,73 +540,70 @@ function switchTab(tabName,btn){
 }
 function changeRound(){currentRound=parseInt(document.getElementById('roundSelect').value);renderBets();renderSummary();}
 
-// ── ROUND SUMMARY ──
 function renderSummary(){
-  const bets = data.rounds[currentRound]||[];
-  const el = document.getElementById('roundSummary');
+  const bets=data.rounds[currentRound]||[];
+  const el=document.getElementById('roundSummary');
   if(!el)return;
   if(!bets.length){el.innerHTML='';return;}
-  const wagered = bets.reduce((s,b)=>s+b.wager,0);
-  const won = bets.filter(b=>b.status==='won');
-  const lost = bets.filter(b=>b.status==='lost');
-  const pending = bets.filter(b=>b.status==='pending');
-  const winnings = won.reduce((s,b)=>s+(b.wager*b.odds),0);
-  const netWon = winnings - won.reduce((s,b)=>s+b.wager,0) - lost.reduce((s,b)=>s+b.wager,0);
-  const bestBet = won.length ? won.reduce((a,b)=>(b.wager*b.odds)>(a.wager*a.odds)?b:a,won[0]) : null;
-  const netClass = netWon>0?'green':netWon<0?'red':'';
+  const wagered=bets.reduce((s,b)=>s+b.wager,0);
+  const won=bets.filter(b=>b.status==='won');
+  const lost=bets.filter(b=>b.status==='lost');
+  const voided=bets.filter(b=>b.status==='voided');
+  const pending=bets.filter(b=>b.status==='pending');
+  const winnings=won.reduce((s,b)=>s+(b.wager*b.odds),0);
+  const netWon=winnings-won.reduce((s,b)=>s+b.wager,0)-lost.reduce((s,b)=>s+b.wager,0)-voided.reduce((s,b)=>s+b.wager,0);
+  const bestBet=won.length?won.reduce((a,b)=>(b.wager*b.odds)>(a.wager*a.odds)?b:a,won[0]):null;
+  const netClass=netWon>0?'green':netWon<0?'red':'';
   el.innerHTML=`
     <div class="summary-card"><div class="summary-label">Total Wagered</div><div class="summary-value blue">$${wagered.toFixed(2)}</div></div>
     <div class="summary-card"><div class="summary-label">Bets Won</div><div class="summary-value green">${won.length}</div></div>
     <div class="summary-card"><div class="summary-label">Bets Lost</div><div class="summary-value red">${lost.length}</div></div>
+    <div class="summary-card"><div class="summary-label">Voided</div><div class="summary-value" style="color:var(--voided-text)">${voided.length}</div></div>
     <div class="summary-card"><div class="summary-label">Pending</div><div class="summary-value">${pending.length}</div></div>
     <div class="summary-card"><div class="summary-label">Net This Round</div><div class="summary-value ${netClass}">${netWon>=0?'+':''}$${netWon.toFixed(2)}</div></div>
     ${bestBet?`<div class="summary-card highlight"><div class="summary-label">🏆 Best Pick</div><div class="summary-value blue" style="font-size:1.1rem">${bestBet.player}</div><div class="summary-sub">${bestBet.betName.substring(0,30)}</div></div>`:''}
   `;
 }
 
-// ── BET CARDS ──
 function betCardHTML(bet,showActions){
-  const statusLabel = bet.status==='pending'?'⏳ Live':bet.status==='won'?'✓ Won':'✗ Lost';
-  const comment = bet.comment?`<div class="bet-comment">💬 ${bet.comment}</div>`:'';
-  const actions = showActions?`<div class="bet-card-actions">
+  const statusLabel=bet.status==='pending'?'⏳ Live':bet.status==='won'?'✓ Won':bet.status==='voided'?'∅ Voided':'✗ Lost';
+  const comment=bet.comment?`<div class="bet-comment">💬 ${bet.comment}</div>`:'';
+  const actions=showActions?`<div class="bet-card-actions">
     <button class="btn-won" onclick="updateBetStatus(${bet.id},'won')">✓ Won</button>
     <button class="btn-lost" onclick="updateBetStatus(${bet.id},'lost')">✗ Lost</button>
+    <button class="btn-voided" onclick="updateBetStatus(${bet.id},'voided')">∅ Void</button>
     <button class="btn-delete" onclick="deleteBet(${bet.id})">🗑 Delete</button>
   </div>`:'';
   return `<div class="bet-card ${bet.status} ${bet.status==='pending'?'pending-card':''}">
     <div class="bet-card-top">
-      <div class="bet-card-meta">
-        <span class="bet-player-tag">${bet.player}</span>
-        <span class="bet-status-badge ${bet.status}">${statusLabel}</span>
-      </div>
-      <div class="bet-name">${bet.betName}</div>
-      ${comment}
+      <div class="bet-card-meta"><span class="bet-player-tag">${bet.player}</span><span class="bet-status-badge ${bet.status}">${statusLabel}</span></div>
+      <div class="bet-name">${bet.betName}</div>${comment}
     </div>
     <div class="bet-card-stats">
       <div class="bet-stat"><div class="bet-stat-label">Wager</div><div class="bet-stat-value">$${bet.wager.toFixed(2)}</div></div>
       <div class="bet-stat"><div class="bet-stat-label">Odds</div><div class="bet-stat-value">${bet.odds.toFixed(2)}</div></div>
       <div class="bet-stat"><div class="bet-stat-label">To Win</div><div class="bet-stat-value">$${(bet.wager*bet.odds).toFixed(2)}</div></div>
-    </div>
-    ${actions}
+    </div>${actions}
   </div>`;
 }
 
 function renderBets(){
-  const container = document.getElementById('betsContainer');
-  const bets = data.rounds[currentRound]||[];
+  const container=document.getElementById('betsContainer');
+  const bets=data.rounds[currentRound]||[];
   if(!bets.length){container.innerHTML='<div class="empty-state"><div class="empty-state-icon">🎯</div><p>No bets placed this round yet.</p></div>';return;}
   container.innerHTML=`<div class="bets-grid">${bets.map(b=>betCardHTML(b,SHOW_ACTIONS)).join('')}</div>`;
 }
 
 function calculateStats(){
   const stats={};
-  PLAYERS.forEach(p=>{stats[p]={wins:0,losses:0,pending:0,totalWagered:0,totalWinnings:0};});
+  PLAYERS.forEach(p=>{stats[p]={wins:0,losses:0,voided:0,pending:0,totalWagered:0,totalWinnings:0};});
   Object.values(data.rounds).forEach(bets=>{
     bets.forEach(bet=>{
       const s=stats[bet.player];
       s.totalWagered+=bet.wager;
       if(bet.status==='won'){s.wins++;s.totalWinnings+=bet.wager*bet.odds;}
       else if(bet.status==='lost')s.losses++;
+      else if(bet.status==='voided')s.voided++;
       else s.pending++;
     });
   });
@@ -615,7 +619,7 @@ function renderLeaderboard(){
     return `<tr>
       <td data-label="Rank"><div class="rank-cell"><div class="rank-badge ${rankClasses[i]||'other'}">${i+1}</div>${player}</div></td>
       <td data-label="Wins">${s.wins}</td><td data-label="Losses">${s.losses}</td>
-      <td data-label="Pending">${s.pending}</td>
+      <td data-label="Voided">${s.voided}</td><td data-label="Pending">${s.pending}</td>
       <td data-label="Wagered">$${s.totalWagered.toFixed(2)}</td>
       <td data-label="Winnings">$${s.totalWinnings.toFixed(2)}</td>
       <td data-label="Net P&L" class="${profit>=0?'profit-positive':'profit-negative'}">${profit>=0?'+':''}$${profit.toFixed(2)}</td>
@@ -623,30 +627,24 @@ function renderLeaderboard(){
   }).join('');
 }
 
-
-function renderSimpleLeaderboard() {
-    const el = document.getElementById('simpleLeaderboardList');
-    if (!el) return;
-    const stats = calculateStats();
-    const rankClasses = ['first','second','third','',''];
-    const sorted = [...PLAYERS].sort((a,b) =>
-        (stats[b].totalWinnings - stats[b].totalWagered) -
-        (stats[a].totalWinnings - stats[a].totalWagered)
-    );
-    el.innerHTML = sorted.map((player, i) => {
-        const s = stats[player];
-        const profit = s.totalWinnings - s.totalWagered;
-        const profitClass = profit > 0 ? 'pos' : profit < 0 ? 'neg' : 'zero';
-        const profitStr = (profit >= 0 ? '+' : '') + '$' + profit.toFixed(2);
-        return `<div class="simple-lb-card ${rankClasses[i]}">
-            <div class="simple-lb-rank">${i + 1}</div>
-            <div class="simple-lb-info">
-                <div class="simple-lb-name">${player}</div>
-                <div class="simple-lb-record">${s.wins}W &nbsp;${s.losses}L &nbsp;${s.pending} pending</div>
-            </div>
-            <div class="simple-lb-profit ${profitClass}">${profitStr}</div>
-        </div>`;
-    }).join('');
+function renderSimpleLeaderboard(){
+  const el=document.getElementById('simpleLeaderboardList');
+  if(!el)return;
+  const stats=calculateStats();
+  const rankClasses=['first','second','third','',''];
+  const sorted=[...PLAYERS].sort((a,b)=>(stats[b].totalWinnings-stats[b].totalWagered)-(stats[a].totalWinnings-stats[a].totalWagered));
+  el.innerHTML=sorted.map((player,i)=>{
+    const s=stats[player],profit=s.totalWinnings-s.totalWagered;
+    const profitClass=profit>0?'pos':profit<0?'neg':'zero';
+    return `<div class="simple-lb-card ${rankClasses[i]}">
+      <div class="simple-lb-rank">${i+1}</div>
+      <div class="simple-lb-info">
+        <div class="simple-lb-name">${player}</div>
+        <div class="simple-lb-record">${s.wins}W ${s.losses}L ${s.voided>0?'∅'+s.voided+' ':''}&nbsp;${s.pending} pending</div>
+      </div>
+      <div class="simple-lb-profit ${profitClass}">${profit>=0?'+':''}$${profit.toFixed(2)}</div>
+    </div>`;
+  }).join('');
 }
 
 function renderHistory(){
@@ -660,71 +658,49 @@ function renderHistory(){
     </div>`).join('');
 }
 
-// ── CHARTS ──
 window.chartInstances={};
 function renderCharts(){
-  const wrap = document.getElementById('chartsContainer');
+  const wrap=document.getElementById('chartsContainer');
   if(!wrap)return;
-  const isDark = document.documentElement.getAttribute('data-theme')==='dark';
-  const gridColor = isDark?'rgba(255,255,255,.08)':'rgba(0,0,0,.06)';
-  const textColor = isDark?'#94a3b8':'#3d5275';
-
-  const rounds = Object.keys(data.rounds).map(Number).filter(r=>data.rounds[r].length>0).sort((a,b)=>a-b);
+  const isDark=document.documentElement.getAttribute('data-theme')==='dark';
+  const gridColor=isDark?'rgba(255,255,255,.08)':'rgba(0,0,0,.06)';
+  const textColor=isDark?'#94a3b8':'#3d5275';
+  const rounds=Object.keys(data.rounds).map(Number).filter(r=>data.rounds[r].length>0).sort((a,b)=>a-b);
   if(!rounds.length){wrap.innerHTML='<div class="empty-state"><div class="empty-state-icon">📈</div><p>No data yet — add some bets first!</p></div>';return;}
-
   wrap.innerHTML='<div class="charts-grid" id="chartsGrid"></div>';
-  const grid = document.getElementById('chartsGrid');
-
+  const grid=document.getElementById('chartsGrid');
   PLAYERS.forEach(player=>{
-    // Build cumulative profit per round
     let cumulative=0;
-    const labels=[];
-    const values=[];
+    const labels=[],values=[];
     rounds.forEach(r=>{
       const bets=(data.rounds[r]||[]).filter(b=>b.player===player);
       if(!bets.length)return;
       bets.forEach(b=>{
         if(b.status==='won')cumulative+=b.wager*b.odds-b.wager;
-        else if(b.status==='lost')cumulative-=b.wager;
+        else if(b.status==='lost'||b.status==='voided')cumulative-=b.wager;
       });
       labels.push('Rd '+r);
       values.push(parseFloat(cumulative.toFixed(2)));
     });
-
     if(!labels.length)return;
     const latest=values[values.length-1]||0;
     const color=PLAYER_COLORS[player]||'#2563eb';
-    const profitClass=latest>=0?'green':latest<0?'red':'';
-
     const card=document.createElement('div');
     card.className='chart-card';
-    card.innerHTML=`<div class="chart-title">${player}<span class="${profitClass}" style="color:${latest>=0?'var(--green)':'var(--red)'}">${latest>=0?'+':''}$${latest.toFixed(2)}</span></div><div class="chart-canvas-wrap"><canvas id="chart-${player}"></canvas></div>`;
+    card.innerHTML=`<div class="chart-title">${player}<span style="color:${latest>=0?'var(--green)':'var(--red)};font-weight:800">${latest>=0?'+':''}$${latest.toFixed(2)}</span></div><div class="chart-canvas-wrap"><canvas id="chart-${player}"></canvas></div>`;
     grid.appendChild(card);
-
     const ctx=document.getElementById(`chart-${player}`).getContext('2d');
     if(window.chartInstances[player])window.chartInstances[player].destroy();
     window.chartInstances[player]=new Chart(ctx,{
       type:'line',
-      data:{
-        labels,
-        datasets:[{
-          data:values,
-          borderColor:color,
-          backgroundColor:color+'22',
-          borderWidth:2.5,
-          pointBackgroundColor:color,
-          pointRadius:4,
-          tension:.35,
-          fill:true
-        }]
-      },
+      data:{labels,datasets:[{data:values,borderColor:color,backgroundColor:color+'22',borderWidth:2.5,pointBackgroundColor:color,pointRadius:4,tension:.35,fill:true}]},
       options:{
         responsive:true,maintainAspectRatio:false,
         plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`$${ctx.raw>=0?'+':''}${ctx.raw}`}}},
         scales:{
           x:{grid:{color:gridColor},ticks:{color:textColor,font:{family:'Barlow Condensed',size:11,weight:'700'}}},
-          y:{grid:{color:gridColor},ticks:{color:textColor,font:{family:'Barlow Condensed',size:11},callback:v=>`$${v}`},
-            afterDataLimits(scale){const r=Math.max(Math.abs(scale.min),Math.abs(scale.max));scale.min=-r*1.2;scale.max=r*1.2;}
+          y:{grid:{color:gridColor},ticks:{color:textColor,callback:v=>`$${v}`},
+            afterDataLimits(scale){const r=Math.max(Math.abs(scale.min),Math.abs(scale.max),10);scale.min=-r*1.2;scale.max=r*1.2;}
           }
         }
       }
@@ -739,11 +715,12 @@ function initRoundSelector(){
 function render(){renderBets();renderSummary();renderLeaderboard();renderSimpleLeaderboard();renderHistory();renderCharts();}
 
 
-// ── PIN ──
-let pinEntry='';
+// ── PIN ──────────────────────────────────────────────────────────────────────
+const CORRECT_PIN = '123456';
+let pinEntry = '';
 function pinPress(n){
   if(pinEntry.length>=6)return;
-  pinEntry+=n;
+  pinEntry+=String(n);
   updatePinDots();
   if(pinEntry.length===6)setTimeout(checkPin,150);
 }
@@ -758,7 +735,10 @@ function updatePinDots(){
 function checkPin(){
   const stored=localStorage.getItem('admin_pin')||CORRECT_PIN;
   if(pinEntry===stored){
-    document.getElementById('pinScreen').style.display='none';
+    const ps=document.getElementById('pinScreen');
+    ps.style.opacity='0';
+    ps.style.transition='opacity .3s';
+    setTimeout(()=>{ps.style.display='none';},300);
   }else{
     document.getElementById('pinError').textContent='Incorrect PIN. Try again.';
     for(let i=0;i<6;i++)document.getElementById('pd'+i).classList.add('error');
@@ -766,49 +746,80 @@ function checkPin(){
   }
 }
 
-// ── JSONBIN ──
+// ── GITHUB SYNC ──────────────────────────────────────────────────────────────
 function saveConfig(){
-  BIN_ID=document.getElementById('inputBinId').value.trim();
-  API_KEY=document.getElementById('inputApiKey').value.trim();
-  if(!BIN_ID||!API_KEY){alert('Please enter both fields.');return;}
-  localStorage.setItem('jsonbin_id',BIN_ID);localStorage.setItem('jsonbin_key',API_KEY);
+  GITHUB_TOKEN=document.getElementById('inputToken').value.trim();
+  if(!GITHUB_TOKEN){alert('Please enter your GitHub token.');return;}
+  localStorage.setItem('github_token',GITHUB_TOKEN);
   document.getElementById('setupBanner').style.display='none';
-  setSyncStatus('syncing','Connecting...');pushToCloud();
+  setSyncStatus('syncing','Connecting...');
+  pullFromGitHub();
 }
 function loadConfig(){
-  BIN_ID=localStorage.getItem('jsonbin_id')||'';API_KEY=localStorage.getItem('jsonbin_key')||'';
-  if(BIN_ID&&API_KEY){
+  GITHUB_TOKEN=localStorage.getItem('github_token')||'';
+  if(GITHUB_TOKEN){
     document.getElementById('setupBanner').style.display='none';
-    document.getElementById('inputBinId').value=BIN_ID;document.getElementById('inputApiKey').value=API_KEY;
-    setSyncStatus('syncing','Loading...');pullFromCloud();
+    document.getElementById('inputToken').value=GITHUB_TOKEN;
+    setSyncStatus('syncing','Loading...');
+    pullFromGitHub();
   }
 }
 function setSyncStatus(state,text){
-  document.getElementById('syncStatus').className='sync-status '+state;
+  const el=document.getElementById('syncStatus');
+  if(!el)return;
+  el.className='sync-status '+state;
   document.getElementById('syncDot').className='sync-dot'+(state==='syncing'?' pulse':'');
   document.getElementById('syncText').textContent=text;
 }
-async function pushToCloud(){
-  if(!BIN_ID||!API_KEY)return;setSyncStatus('syncing','Syncing...');
+async function pullFromGitHub(){
   try{
-    const res=await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`,{method:'PUT',headers:{'Content-Type':'application/json','X-Master-Key':API_KEY},body:JSON.stringify(data)});
-    if(!res.ok)throw new Error('HTTP '+res.status);
-    setSyncStatus('synced','Synced '+new Date().toLocaleTimeString('en-AU',{hour:'2-digit',minute:'2-digit'}));
-  }catch(e){setSyncStatus('error','Sync failed');console.error(e);}
-}
-async function pullFromCloud(){
-  if(!BIN_ID||!API_KEY)return;
-  try{
-    const res=await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`,{headers:{'X-Master-Key':API_KEY}});
+    const res=await fetch(GITHUB_API_URL,{headers:{'Authorization':'token '+GITHUB_TOKEN,'Accept':'application/vnd.github.v3+json'}});
+    if(res.status===404){
+      // File doesn't exist yet — start fresh
+      fileSha='';
+      initializeData();render();
+      setSyncStatus('synced','Connected — no data yet');
+      return;
+    }
     if(!res.ok)throw new Error('HTTP '+res.status);
     const json=await res.json();
-    if(json.record&&json.record.rounds)data=json.record;
+    fileSha=json.sha;
+    const decoded=JSON.parse(atob(json.content.replace(/\n/g,'')));
+    if(decoded&&decoded.rounds)data=decoded;
     initializeData();render();
     setSyncStatus('synced','Synced '+new Date().toLocaleTimeString('en-AU',{hour:'2-digit',minute:'2-digit'}));
-  }catch(e){setSyncStatus('error','Load failed');initializeData();render();console.error(e);}
+  }catch(e){setSyncStatus('error','Load failed — check token');console.error(e);initializeData();render();}
 }
+async function pushToGitHub(){
+  if(!GITHUB_TOKEN)return;
+  setSyncStatus('syncing','Saving...');
+  try{
+    const content=btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2))));
+    const body={message:'Update bet data',content,branch:GITHUB_BRANCH};
+    if(fileSha)body.sha=fileSha;
+    const res=await fetch(GITHUB_API_URL,{
+      method:'PUT',
+      headers:{'Authorization':'token '+GITHUB_TOKEN,'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'},
+      body:JSON.stringify(body)
+    });
+    if(!res.ok){
+      const err=await res.json();
+      // SHA conflict — refetch and retry
+      if(res.status===409||res.status===422){
+        await pullFromGitHub();
+        return pushToGitHub();
+      }
+      throw new Error(JSON.stringify(err));
+    }
+    const json=await res.json();
+    fileSha=json.content.sha;
+    setSyncStatus('synced','Synced '+new Date().toLocaleTimeString('en-AU',{hour:'2-digit',minute:'2-digit'}));
+  }catch(e){setSyncStatus('error','Save failed');console.error(e);}
+}
+
+// ── DATA ─────────────────────────────────────────────────────────────────────
 function loadLocalData(){const s=localStorage.getItem('aflBettingData');if(s)data=JSON.parse(s);initializeData();}
-function saveData(){localStorage.setItem('aflBettingData',JSON.stringify(data));render();pushToCloud();}
+function saveData(){localStorage.setItem('aflBettingData',JSON.stringify(data));render();pushToGitHub();}
 function addBet(){
   const player=document.getElementById('playerName').value;
   const betName=document.getElementById('betName').value.trim();
@@ -816,7 +827,9 @@ function addBet(){
   const odds=parseFloat(document.getElementById('odds').value);
   if(!player||!betName||isNaN(wager)||isNaN(odds)||wager<=0||odds<=0){alert('Please fill in all fields correctly.');return;}
   data.rounds[currentRound].push({id:Date.now(),player,betName,wager,odds,status:'pending'});
-  document.getElementById('betName').value='';document.getElementById('wager').value='';document.getElementById('odds').value='';
+  document.getElementById('betName').value='';
+  document.getElementById('wager').value='';
+  document.getElementById('odds').value='';
   saveData();
 }
 function updateBetStatus(id,status){data.rounds[currentRound]=data.rounds[currentRound].map(b=>b.id===id?{...b,status}:b);saveData();}
@@ -824,14 +837,22 @@ function deleteBet(id){if(!confirm('Delete this bet?'))return;data.rounds[curren
 function exportData(){
   const stats=calculateStats();
   const sorted=[...PLAYERS].sort((a,b)=>(stats[b].totalWinnings-stats[b].totalWagered)-(stats[a].totalWinnings-stats[a].totalWagered));
-  let csv='SURE THING 2026\n\nLEADERBOARD\nRank,Player,Wins,Losses,Pending,Wagered,Winnings,Net P&L\n';
-  sorted.forEach((p,i)=>{const s=stats[p];csv+=`${i+1},${p},${s.wins},${s.losses},${s.pending},${s.totalWagered.toFixed(2)},${s.totalWinnings.toFixed(2)},${(s.totalWinnings-s.totalWagered).toFixed(2)}\n`;});
+  let csv='SURE THING 2026\n\nLEADERBOARD\nRank,Player,Wins,Losses,Voided,Pending,Wagered,Winnings,Net P&L\n';
+  sorted.forEach((p,i)=>{const s=stats[p];csv+=`${i+1},${p},${s.wins},${s.losses},${s.voided},${s.pending},${s.totalWagered.toFixed(2)},${s.totalWinnings.toFixed(2)},${(s.totalWinnings-s.totalWagered).toFixed(2)}\n`;});
   csv+='\n\nALL BETS\nRound,Player,Bet,Wager,Odds,To Win,Status\n';
   Object.keys(data.rounds).map(Number).sort((a,b)=>a-b).forEach(r=>{data.rounds[r].forEach(b=>{csv+=`${r},${b.player},"${b.betName}",${b.wager.toFixed(2)},${b.odds.toFixed(2)},${(b.wager*b.odds).toFixed(2)},${b.status}\n`;});});
   const link=document.createElement('a');link.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));link.download='Sure-Thing-2026.csv';link.click();
 }
-function resetAllData(){if(!confirm('Reset all data?'))return;data={rounds:{}};initializeData();localStorage.removeItem('aflBettingData');render();pushToCloud();}
-window.addEventListener('load',()=>{initTheme(); initFontSize();loadLocalData();initRoundSelector();render();loadConfig();});
+function resetAllData(){
+  if(!confirm('Reset all data? This cannot be undone.'))return;
+  data={rounds:{}};initializeData();
+  localStorage.removeItem('aflBettingData');
+  render();pushToGitHub();
+}
+window.addEventListener('load',()=>{
+  initTheme();initFontSize();
+  loadLocalData();initRoundSelector();render();loadConfig();
+});
 </script>
-<script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/service-worker.js'));</script>
+<script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/sure-thing-2026/service-worker.js'));</script>
 </body></html>

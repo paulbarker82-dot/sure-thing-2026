@@ -1,0 +1,1469 @@
+{
+  "metadata": {
+    "season": "AFL 2026",
+    "lastUpdated": "2026-08-10T21:44:42+10:00"
+  },
+  "leaderboard": [
+    {
+      "playerId": 1,
+      "name": "Barks",
+      "rank": 1,
+      "profit": 19.3,
+      "record": "19W - 4L",
+      "status": "pos"
+    },
+    {
+      "playerId": 2,
+      "name": "Demam",
+      "rank": 2,
+      "profit": 13.7,
+      "record": "19W - 4L",
+      "status": "pos"
+    },
+    {
+      "playerId": 3,
+      "name": "Ahern",
+      "rank": 3,
+      "profit": 3.4,
+      "record": "17W - 6L",
+      "status": "pos"
+    },
+    {
+      "playerId": 4,
+      "name": "Planner",
+      "rank": 4,
+      "profit": -11.8,
+      "record": "17W - 6L",
+      "status": "neg"
+    },
+    {
+      "playerId": 5,
+      "name": "Jon",
+      "rank": 5,
+      "profit": -20.5,
+      "record": "16W - 7L",
+      "status": "neg"
+    }
+  ],
+  "rounds": [
+    {
+      "roundId": "RD1",
+      "roundLabel": "Round 1",
+      "totalProfit": 3.4,
+      "bets": [
+        {
+          "betId": "101",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "C. Curnow 2+ goals",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.22,
+          "return": 0.0
+        },
+        {
+          "betId": "102",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "R. Thilthorpe 2+ goals",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.65,
+          "return": 16.5
+        },
+        {
+          "betId": "103",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "S. Darcy 2+ goals",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.22,
+          "return": 12.2
+        },
+        {
+          "betId": "104",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "K. Lohmann 1+ goals",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.22,
+          "return": 12.2
+        },
+        {
+          "betId": "105",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "N. Daicos 26+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.25,
+          "return": 12.5
+        }
+      ]
+    },
+    {
+      "roundId": "RD2",
+      "roundLabel": "Round 2",
+      "totalProfit": 16.7,
+      "bets": [
+        {
+          "betId": "106",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "Bont 25+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.42,
+          "return": 14.2
+        },
+        {
+          "betId": "107",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "T. Liberatore 23+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.4,
+          "return": 14.0
+        },
+        {
+          "betId": "108",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "Gold Coast Win",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.18,
+          "return": 11.8
+        },
+        {
+          "betId": "109",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "Freo Win",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.35,
+          "return": 13.5
+        },
+        {
+          "betId": "110",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "J. Treacy 2+ goals",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.32,
+          "return": 13.2
+        }
+      ]
+    },
+    {
+      "roundId": "RD3",
+      "roundLabel": "Round 3",
+      "totalProfit": -22.0,
+      "bets": [
+        {
+          "betId": "111",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "Port Line -15.5",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.62,
+          "return": 0.0
+        },
+        {
+          "betId": "112",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "Nas Wang Mil 1+ goal",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.41,
+          "return": 0.0
+        },
+        {
+          "betId": "113",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "C. Oliver 24+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.33,
+          "return": 13.3
+        },
+        {
+          "betId": "114",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "J. Crisp 19+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.47,
+          "return": 14.7
+        },
+        {
+          "betId": "115",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "Z. Merrett 25+ poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.39,
+          "return": 0.0
+        }
+      ]
+    },
+    {
+      "roundId": "RD4",
+      "roundLabel": "Round 4",
+      "totalProfit": -23.8,
+      "bets": [
+        {
+          "betId": "116",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "Luke Davies-Uniacke 25+ Poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.35,
+          "return": 0.0
+        },
+        {
+          "betId": "117",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "R. Thilthorpe 2+ Goals",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.43,
+          "return": 0.0
+        },
+        {
+          "betId": "118",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "Josh Worrell 22+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.34,
+          "return": 13.4
+        },
+        {
+          "betId": "119",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "Sam Walsh 23+ Poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.3,
+          "return": 0.0
+        },
+        {
+          "betId": "120",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "Bont 25+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.28,
+          "return": 12.8
+        }
+      ]
+    },
+    {
+      "roundId": "RD5",
+      "roundLabel": "Round 5",
+      "totalProfit": -11.4,
+      "bets": [
+        {
+          "betId": "121",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "D. Zorko 25+ Poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.33,
+          "return": 0.0
+        },
+        {
+          "betId": "122",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "Z. Butters 24+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.28,
+          "return": 12.8
+        },
+        {
+          "betId": "123",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "J. Cameron 2+ goals",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.28,
+          "return": 12.8
+        },
+        {
+          "betId": "124",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "J. Dunkley 20+ poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.3,
+          "return": 0.0
+        },
+        {
+          "betId": "125",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "H. Sheezel 26+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.3,
+          "return": 13.0
+        }
+      ]
+    },
+    {
+      "roundId": "RD6",
+      "roundLabel": "Round 6",
+      "totalProfit": 16.3,
+      "bets": [
+        {
+          "betId": "126",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "Bris first team to 50pts",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.39,
+          "return": 13.9
+        },
+        {
+          "betId": "127",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "Archie Roberts 25+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.28,
+          "return": 12.8
+        },
+        {
+          "betId": "128",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "Jai Newcombe 22+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.3,
+          "return": 13.0
+        },
+        {
+          "betId": "129",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "Bailey Smith 28+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.23,
+          "return": 12.3
+        },
+        {
+          "betId": "130",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "Lachie Ash 24+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.43,
+          "return": 14.3
+        }
+      ]
+    },
+    {
+      "roundId": "RD7",
+      "roundLabel": "Round 7",
+      "totalProfit": 1.4,
+      "bets": [
+        {
+          "betId": "131",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "Z. Merrett 28+ poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.48,
+          "return": 0.0
+        },
+        {
+          "betId": "132",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "M. Holmes 24+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.21,
+          "return": 12.1
+        },
+        {
+          "betId": "133",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "N. Wang Mil 25+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.31,
+          "return": 13.1
+        },
+        {
+          "betId": "134",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "H. Sheezel 28+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.34,
+          "return": 13.4
+        },
+        {
+          "betId": "135",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "C. Oliver 26+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.28,
+          "return": 12.8
+        }
+      ]
+    },
+    {
+      "roundId": "RD8",
+      "roundLabel": "Round 8",
+      "totalProfit": -10.2,
+      "bets": [
+        {
+          "betId": "136",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "M. Bont 25+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.35,
+          "return": 13.5
+        },
+        {
+          "betId": "137",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "Freo H2H",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.35,
+          "return": 13.5
+        },
+        {
+          "betId": "138",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "Bailey Smith 28+ Poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.21,
+          "return": 0.0
+        },
+        {
+          "betId": "139",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "Jack Sinclair 26+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.28,
+          "return": 12.8
+        },
+        {
+          "betId": "140",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "Hugo Garcia 21+ Poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.36,
+          "return": 0.0
+        }
+      ]
+    },
+    {
+      "roundId": "RD9",
+      "roundLabel": "Round 9",
+      "totalProfit": -12.6,
+      "bets": [
+        {
+          "betId": "141",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "N. Newman 19+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.21,
+          "return": 12.1
+        },
+        {
+          "betId": "142",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "N. Blakey 20+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.31,
+          "return": 13.1
+        },
+        {
+          "betId": "143",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "C. Oliver 26+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.22,
+          "return": 12.2
+        },
+        {
+          "betId": "144",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "Melb -36.5 line",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.75,
+          "return": 0.0
+        },
+        {
+          "betId": "145",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "GWS -21.5 line",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.37,
+          "return": 0.0
+        }
+      ]
+    },
+    {
+      "roundId": "RD10",
+      "roundLabel": "Round 10",
+      "totalProfit": 3.5,
+      "bets": [
+        {
+          "betId": "146",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "N. Daicos 28+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.51,
+          "return": 15.1
+        },
+        {
+          "betId": "147",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "J. Impey 20+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.23,
+          "return": 12.3
+        },
+        {
+          "betId": "148",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "W. Milera 21+ poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.22,
+          "return": 0.0
+        },
+        {
+          "betId": "149",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "L. Parker 22+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.33,
+          "return": 13.3
+        },
+        {
+          "betId": "150",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "R. Sanders 22+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.28,
+          "return": 12.8
+        }
+      ]
+    },
+    {
+      "roundId": "RD11",
+      "roundLabel": "Round 11",
+      "totalProfit": 17.1,
+      "bets": [
+        {
+          "betId": "151",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "Freo -7.5",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.44,
+          "return": 14.4
+        },
+        {
+          "betId": "152",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "Z. Butters 26 + poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.29,
+          "return": 12.9
+        },
+        {
+          "betId": "153",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "C. Petracca 20+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.25,
+          "return": 12.5
+        },
+        {
+          "betId": "154",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "N. Anderson 23+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.35,
+          "return": 13.5
+        },
+        {
+          "betId": "155",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "M. Holmes 24+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.38,
+          "return": 13.8
+        }
+      ]
+    },
+    {
+      "roundId": "RD12",
+      "roundLabel": "Round 12",
+      "totalProfit": -11.5,
+      "bets": [
+        {
+          "betId": "156",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "Cripps 23+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.36,
+          "return": 13.6
+        },
+        {
+          "betId": "157",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "W. Ashcroft 21 + poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.21,
+          "return": 12.1
+        },
+        {
+          "betId": "158",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "Bont 25+ poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.3,
+          "return": 0.0
+        },
+        {
+          "betId": "159",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "J. Crisp 22+ poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.45,
+          "return": 0.0
+        },
+        {
+          "betId": "160",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "N. Daicos 29+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.28,
+          "return": 12.8
+        }
+      ]
+    },
+    {
+      "roundId": "RD13",
+      "roundLabel": "Round 13",
+      "totalProfit": -10.8,
+      "bets": [
+        {
+          "betId": "161",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "C. Petracca 23 + poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.31,
+          "return": 0.0
+        },
+        {
+          "betId": "162",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "Freo H2H",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.29,
+          "return": 12.9
+        },
+        {
+          "betId": "163",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "M. Bont 24+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.38,
+          "return": 13.8
+        },
+        {
+          "betId": "164",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "P. Cripps 25+ Poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.29,
+          "return": 0.0
+        },
+        {
+          "betId": "165",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "D. Wilmot 21+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.25,
+          "return": 12.5
+        }
+      ]
+    },
+    {
+      "roundId": "RD14",
+      "roundLabel": "Round 14",
+      "totalProfit": 3.3,
+      "bets": [
+        {
+          "betId": "166",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "M. Holmes",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.25,
+          "return": 12.5
+        },
+        {
+          "betId": "167",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "D. Wilson 18+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.3,
+          "return": 13.0
+        },
+        {
+          "betId": "168",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "L. McDonald 1+ goal",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.38,
+          "return": 13.8
+        },
+        {
+          "betId": "169",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "L. Neale 14+ Handballs",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.4,
+          "return": 14.0
+        },
+        {
+          "betId": "170",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "J. Sinclair 26+ poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.33,
+          "return": 0.0
+        }
+      ]
+    },
+    {
+      "roundId": "RD15",
+      "roundLabel": "Round 15",
+      "totalProfit": 16.0,
+      "bets": [
+        {
+          "betId": "171",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "N. Anderson 25+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.29,
+          "return": 12.9
+        },
+        {
+          "betId": "172",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "Bont 22+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.31,
+          "return": 13.1
+        },
+        {
+          "betId": "173",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "N. Daicos 30+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.31,
+          "return": 13.1
+        },
+        {
+          "betId": "174",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "Adelaide H2H",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.36,
+          "return": 13.6
+        },
+        {
+          "betId": "175",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "R. Laird 23+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.33,
+          "return": 13.3
+        }
+      ]
+    },
+    {
+      "roundId": "RD16",
+      "roundLabel": "Round 16",
+      "totalProfit": 23.5,
+      "bets": [
+        {
+          "betId": "176",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "N.Newman 19+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.31,
+          "return": 13.1
+        },
+        {
+          "betId": "177",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "S. Walsh 24+",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.2,
+          "return": 12.0
+        },
+        {
+          "betId": "178",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "H. Reid 19+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.22,
+          "return": 12.2
+        },
+        {
+          "betId": "179",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "Carlton Lead at Half",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.22,
+          "return": 12.2
+        },
+        {
+          "betId": "180",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "N. Daicos 14+ handballs",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.29,
+          "return": 12.9
+        },
+        {
+          "betId": "181",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "Collingwood Lead at Half",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.2,
+          "return": 12.0
+        },
+        {
+          "betId": "182",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "Pendles 10+ handballs",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.14,
+          "return": 11.4
+        },
+        {
+          "betId": "183",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "Membrey anytime goal",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.2,
+          "return": 12.0
+        },
+        {
+          "betId": "184",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "J. Short 21+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.22,
+          "return": 12.2
+        },
+        {
+          "betId": "185",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "Cripps 24+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.35,
+          "return": 13.5
+        }
+      ]
+    },
+    {
+      "roundId": "RD17",
+      "roundLabel": "Round 17",
+      "totalProfit": -12.3,
+      "bets": [
+        {
+          "betId": "186",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "J. Newcombe 24+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.31,
+          "return": 13.1
+        },
+        {
+          "betId": "187",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "N. Daicos 30+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.3,
+          "return": 13.0
+        },
+        {
+          "betId": "188",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "N. Anderson 26+ Poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.28,
+          "return": 0.0
+        },
+        {
+          "betId": "189",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "P. Cripps 26+ Poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.31,
+          "return": 0.0
+        },
+        {
+          "betId": "190",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "C. Wilkie 20+ Poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.16,
+          "return": 11.6
+        }
+      ]
+    },
+    {
+      "roundId": "RD18",
+      "roundLabel": "Round 18",
+      "totalProfit": -9.2,
+      "bets": [
+        {
+          "betId": "191",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "N. Daicos 29+ Poss",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.3,
+          "return": 0.0
+        },
+        {
+          "betId": "192",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "N. Daicos 6+ Clearances",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.47,
+          "return": 0.0
+        },
+        {
+          "betId": "193",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "St Kilda H2H",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.58,
+          "return": 15.8
+        },
+        {
+          "betId": "194",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "Naz 28+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.22,
+          "return": 12.2
+        },
+        {
+          "betId": "195",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "C. Oliver 27+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.28,
+          "return": 12.8
+        }
+      ]
+    },
+    {
+      "roundId": "RD19",
+      "roundLabel": "Round 19",
+      "totalProfit": 11.3,
+      "bets": [
+        {
+          "betId": "196",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "I. Heeney 24+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.29,
+          "return": 12.9
+        },
+        {
+          "betId": "197",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "H. Sheezel 28+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.23,
+          "return": 12.3
+        },
+        {
+          "betId": "198",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "P. Cripps 22+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.25,
+          "return": 12.5
+        },
+        {
+          "betId": "199",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "J. Daicos 22+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.2,
+          "return": 12.0
+        },
+        {
+          "betId": "200",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "K. Lohmann 1+ Goal",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.16,
+          "return": 11.6
+        }
+      ]
+    },
+    {
+      "roundId": "RD20",
+      "roundLabel": "Round 20",
+      "totalProfit": 20.7,
+      "bets": [
+        {
+          "betId": "201",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "A. Brayshaw 23+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.25,
+          "return": 12.5
+        },
+        {
+          "betId": "202",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "H. Reid 22+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.62,
+          "return": 16.2
+        },
+        {
+          "betId": "203",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "Nas 26+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.48,
+          "return": 14.8
+        },
+        {
+          "betId": "204",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "D. Wilson 20+",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.45,
+          "return": 14.5
+        },
+        {
+          "betId": "205",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "A.Jones 1+ goals",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.27,
+          "return": 12.7
+        }
+      ]
+    },
+    {
+      "roundId": "RD21",
+      "roundLabel": "Round 21",
+      "totalProfit": 3.1,
+      "bets": [
+        {
+          "betId": "206",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "Freo 17.5+",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.23,
+          "return": 12.3
+        },
+        {
+          "betId": "207",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "M. Hall 19+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.4,
+          "return": 14.0
+        },
+        {
+          "betId": "208",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "Saints +6.5 line",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 2.23,
+          "return": 0.0
+        },
+        {
+          "betId": "209",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "H. Reid 23+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.39,
+          "return": 13.9
+        },
+        {
+          "betId": "210",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "L. Neale 26+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.29,
+          "return": 12.9
+        }
+      ]
+    },
+    {
+      "roundId": "RD22",
+      "roundLabel": "Round 22",
+      "totalProfit": -8.4,
+      "bets": [
+        {
+          "betId": "211",
+          "playerId": 1,
+          "playerName": "Barks",
+          "betName": "J. Ward 20+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.34,
+          "return": 13.4
+        },
+        {
+          "betId": "212",
+          "playerId": 4,
+          "playerName": "Planner",
+          "betName": "R. Thilthorpe 2+",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.26,
+          "return": 0.0
+        },
+        {
+          "betId": "213",
+          "playerId": 2,
+          "playerName": "Demam",
+          "betName": "Ade 2+ goals Qtr",
+          "comment": "",
+          "status": "lost",
+          "stake": 10.0,
+          "odds": 1.36,
+          "return": 0.0
+        },
+        {
+          "betId": "214",
+          "playerId": 3,
+          "playerName": "Ahern",
+          "betName": "H. Reid 23+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.53,
+          "return": 15.3
+        },
+        {
+          "betId": "215",
+          "playerId": 5,
+          "playerName": "Jon",
+          "betName": "Brad Hill 23+ poss",
+          "comment": "",
+          "status": "won",
+          "stake": 10.0,
+          "odds": 1.29,
+          "return": 12.9
+        }
+      ]
+    }
+  ]
+}

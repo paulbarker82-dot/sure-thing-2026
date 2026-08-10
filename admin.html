@@ -415,7 +415,7 @@ body:not(.large-text) .font-toggle .ft-large { opacity: 0.4; }
       <button class="font-toggle" id="fontToggle" onclick="toggleFontSize()" title="Toggle font size"><span class="ft-small">A</span><span class="ft-divider">/</span><span class="ft-large">A</span></button>
       <span class="admin-badge">🔐 Admin</span>
       <button class="btn btn-ghost" onclick="exportData()" style="font-size:.85rem;padding:.4rem .9rem;border-color:rgba(255,255,255,.2);color:#e2e8f0;border-radius:6px;">📥 CSV</button>
-      <div class="sync-status syncing" id="syncStatus">
+      <div class="sync-status syncing" id="syncStatus" onclick="showTokenSetup()" style="cursor:pointer;" title="Tap to update GitHub token">
         <span class="sync-dot pulse" id="syncDot"></span>
         <span id="syncText">Not configured</span>
       </div>
@@ -747,6 +747,11 @@ function checkPin(){
 }
 
 // ── GITHUB SYNC ──────────────────────────────────────────────────────────────
+function showTokenSetup(){
+  document.getElementById('setupBanner').style.display='block';
+  document.getElementById('inputToken').value=GITHUB_TOKEN||'';
+  document.getElementById('inputToken').focus();
+}
 function saveConfig(){
   GITHUB_TOKEN=document.getElementById('inputToken').value.trim();
   if(!GITHUB_TOKEN){alert('Please enter your GitHub token.');return;}

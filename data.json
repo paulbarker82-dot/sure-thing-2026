@@ -5,7 +5,7 @@
         "id": 1000000000001,
         "player": "Demam",
         "betName": "C. Curnow 2+ goals",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.22,
         "status": "lost"
       },
@@ -13,7 +13,7 @@
         "id": 1000000000002,
         "player": "Ahern",
         "betName": "R. Thilthorpe 2+ goals",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.65,
         "status": "won"
       },
@@ -21,7 +21,7 @@
         "id": 1000000000003,
         "player": "Planner",
         "betName": "S. Darcy 2+ goals",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.22,
         "status": "won"
       },
@@ -29,7 +29,7 @@
         "id": 1000000000004,
         "player": "Barks",
         "betName": "K. Lohmann 1+ goals",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.22,
         "status": "won"
       },
@@ -37,7 +37,7 @@
         "id": 1000000000005,
         "player": "Jon",
         "betName": "N. Daicos 26+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.25,
         "status": "won"
       }
@@ -47,7 +47,7 @@
         "id": 1000000000006,
         "player": "Barks",
         "betName": "Bont 25+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.42,
         "status": "won"
       },
@@ -55,7 +55,7 @@
         "id": 1000000000007,
         "player": "Jon",
         "betName": "T. Liberatore 23+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.4,
         "status": "won"
       },
@@ -63,7 +63,7 @@
         "id": 1000000000008,
         "player": "Demam",
         "betName": "Gold Coast Win",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.18,
         "status": "won"
       },
@@ -71,7 +71,7 @@
         "id": 1000000000009,
         "player": "Ahern",
         "betName": "Freo Win",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.35,
         "status": "won"
       },
@@ -79,7 +79,7 @@
         "id": 1000000000010,
         "player": "Planner",
         "betName": "J. Treacy 2+ goals",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.32,
         "status": "won"
       }
@@ -89,7 +89,7 @@
         "id": 1000000000011,
         "player": "Barks",
         "betName": "Port Line -15.5",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.62,
         "status": "lost"
       },
@@ -97,7 +97,7 @@
         "id": 1000000000012,
         "player": "Jon",
         "betName": "Nas Wang Mil 1+ goal",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.41,
         "status": "lost"
       },
@@ -105,7 +105,7 @@
         "id": 1000000000013,
         "player": "Demam",
         "betName": "C. Oliver 24+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.33,
         "status": "won"
       },
@@ -113,7 +113,7 @@
         "id": 1000000000014,
         "player": "Ahern",
         "betName": "J. Crisp 19+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.47,
         "status": "won"
       },
@@ -121,7 +121,7 @@
         "id": 1000000000015,
         "player": "Planner",
         "betName": "Z. Merrett 25+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.39,
         "status": "lost"
       }
@@ -131,7 +131,7 @@
         "id": 1000000000016,
         "player": "Jon",
         "betName": "Luke Davies-Uniacke 25+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.35,
         "status": "lost"
       },
@@ -139,7 +139,7 @@
         "id": 1000000000017,
         "player": "Planner",
         "betName": "R. Thilthorpe 2+ Goals",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.43,
         "status": "lost"
       },
@@ -147,7 +147,7 @@
         "id": 1000000000018,
         "player": "Barks",
         "betName": "Josh Worrell 22+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.34,
         "status": "won"
       },
@@ -155,7 +155,7 @@
         "id": 1000000000019,
         "player": "Demam",
         "betName": "Sam Walsh 23+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.3,
         "status": "lost"
       },
@@ -163,7 +163,7 @@
         "id": 1000000000020,
         "player": "Ahern",
         "betName": "Bont 25+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.28,
         "status": "won"
       }
@@ -173,7 +173,7 @@
         "id": 1000000000021,
         "player": "Barks",
         "betName": "D. Zorko 25+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.33,
         "status": "lost"
       },
@@ -181,7 +181,7 @@
         "id": 1000000000022,
         "player": "Jon",
         "betName": "Z. Butters 24+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.28,
         "status": "won"
       },
@@ -189,7 +189,7 @@
         "id": 1000000000023,
         "player": "Ahern",
         "betName": "J. Cameron 2+ goals",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.28,
         "status": "won"
       },
@@ -197,7 +197,7 @@
         "id": 1000000000024,
         "player": "Demam",
         "betName": "J. Dunkley 20+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.3,
         "status": "lost"
       },
@@ -205,7 +205,7 @@
         "id": 1000000000025,
         "player": "Planner",
         "betName": "H. Sheezel 26+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.3,
         "status": "won"
       }
@@ -215,7 +215,7 @@
         "id": 1000000000026,
         "player": "Demam",
         "betName": "Bris first team to 50pts",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.39,
         "status": "won"
       },
@@ -223,7 +223,7 @@
         "id": 1000000000027,
         "player": "Barks",
         "betName": "Archie Roberts 25+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.28,
         "status": "won"
       },
@@ -231,7 +231,7 @@
         "id": 1000000000028,
         "player": "Planner",
         "betName": "Jai Newcombe 22+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.3,
         "status": "won"
       },
@@ -239,7 +239,7 @@
         "id": 1000000000029,
         "player": "Ahern",
         "betName": "Bailey Smith 28+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.23,
         "status": "won"
       },
@@ -247,7 +247,7 @@
         "id": 1000000000030,
         "player": "Jon",
         "betName": "Lachie Ash 24+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.43,
         "status": "won"
       }
@@ -257,7 +257,7 @@
         "id": 1000000000031,
         "player": "Ahern",
         "betName": "Z. Merrett 28+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.48,
         "status": "lost"
       },
@@ -265,7 +265,7 @@
         "id": 1000000000032,
         "player": "Demam",
         "betName": "M. Holmes 24+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.21,
         "status": "won"
       },
@@ -273,7 +273,7 @@
         "id": 1000000000033,
         "player": "Jon",
         "betName": "N. Wang Mil 25+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.31,
         "status": "won"
       },
@@ -281,7 +281,7 @@
         "id": 1000000000034,
         "player": "Barks",
         "betName": "H. Sheezel 28+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.34,
         "status": "won"
       },
@@ -289,7 +289,7 @@
         "id": 1000000000035,
         "player": "Planner",
         "betName": "C. Oliver 26+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.28,
         "status": "won"
       }
@@ -299,7 +299,7 @@
         "id": 1000000000036,
         "player": "Barks",
         "betName": "M. Bont 25+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.35,
         "status": "won"
       },
@@ -307,7 +307,7 @@
         "id": 1000000000037,
         "player": "Demam",
         "betName": "Freo H2H",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.35,
         "status": "won"
       },
@@ -315,7 +315,7 @@
         "id": 1000000000038,
         "player": "Ahern",
         "betName": "Bailey Smith 28+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.21,
         "status": "lost"
       },
@@ -323,7 +323,7 @@
         "id": 1000000000039,
         "player": "Planner",
         "betName": "Jack Sinclair 26+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.28,
         "status": "won"
       },
@@ -331,7 +331,7 @@
         "id": 1000000000040,
         "player": "Jon",
         "betName": "Hugo Garcia 21+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.36,
         "status": "lost"
       }
@@ -341,7 +341,7 @@
         "id": 1000000000041,
         "player": "Demam",
         "betName": "N. Newman 19+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.21,
         "status": "won"
       },
@@ -349,7 +349,7 @@
         "id": 1000000000042,
         "player": "Planner",
         "betName": "N. Blakey 20+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.31,
         "status": "won"
       },
@@ -357,7 +357,7 @@
         "id": 1000000000043,
         "player": "Jon",
         "betName": "C. Oliver 26+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.22,
         "status": "won"
       },
@@ -365,7 +365,7 @@
         "id": 1000000000044,
         "player": "Ahern",
         "betName": "Melb -36.5 line",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.75,
         "status": "lost"
       },
@@ -373,7 +373,7 @@
         "id": 1000000000045,
         "player": "Barks",
         "betName": "GWS -21.5 line",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.37,
         "status": "lost"
       }
@@ -383,7 +383,7 @@
         "id": 1000000000046,
         "player": "Ahern",
         "betName": "N. Daicos 28+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.51,
         "status": "won"
       },
@@ -391,7 +391,7 @@
         "id": 1000000000047,
         "player": "Demam",
         "betName": "J. Impey 20+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.23,
         "status": "won"
       },
@@ -399,7 +399,7 @@
         "id": 1000000000048,
         "player": "Jon",
         "betName": "W. Milera 21+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.22,
         "status": "lost"
       },
@@ -407,7 +407,7 @@
         "id": 1000000000049,
         "player": "Barks",
         "betName": "L. Parker 22+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.33,
         "status": "won"
       },
@@ -415,7 +415,7 @@
         "id": 1000000000050,
         "player": "Planner",
         "betName": "R. Sanders 22+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.28,
         "status": "won"
       }
@@ -425,7 +425,7 @@
         "id": 1000000000051,
         "player": "Ahern",
         "betName": "Freo -7.5",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.44,
         "status": "won"
       },
@@ -433,7 +433,7 @@
         "id": 1000000000052,
         "player": "Jon",
         "betName": "Z. Butters 26 + poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.29,
         "status": "won"
       },
@@ -441,7 +441,7 @@
         "id": 1000000000053,
         "player": "Demam",
         "betName": "C. Petracca 20+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.25,
         "status": "won"
       },
@@ -449,7 +449,7 @@
         "id": 1000000000054,
         "player": "Planner",
         "betName": "N. Anderson 23+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.35,
         "status": "won"
       },
@@ -457,7 +457,7 @@
         "id": 1000000000055,
         "player": "Barks",
         "betName": "M. Holmes 24+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.38,
         "status": "won"
       }
@@ -467,7 +467,7 @@
         "id": 1000000000056,
         "player": "Jon",
         "betName": "Cripps 23+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.36,
         "status": "won"
       },
@@ -475,7 +475,7 @@
         "id": 1000000000057,
         "player": "Demam",
         "betName": "W. Ashcroft 21 + poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.21,
         "status": "won"
       },
@@ -483,7 +483,7 @@
         "id": 1000000000058,
         "player": "Barks",
         "betName": "Bont 25+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.3,
         "status": "lost"
       },
@@ -491,7 +491,7 @@
         "id": 1000000000059,
         "player": "Ahern",
         "betName": "J. Crisp 22+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.45,
         "status": "lost"
       },
@@ -499,7 +499,7 @@
         "id": 1000000000060,
         "player": "Planner",
         "betName": "N. Daicos 29+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.28,
         "status": "won"
       }
@@ -509,7 +509,7 @@
         "id": 1000000000061,
         "player": "Planner",
         "betName": "C. Petracca 23 + poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.31,
         "status": "lost"
       },
@@ -517,7 +517,7 @@
         "id": 1000000000062,
         "player": "Demam",
         "betName": "Freo H2H",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.29,
         "status": "won"
       },
@@ -525,7 +525,7 @@
         "id": 1000000000063,
         "player": "Ahern",
         "betName": "M. Bont 24+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.38,
         "status": "won"
       },
@@ -533,7 +533,7 @@
         "id": 1000000000064,
         "player": "Jon",
         "betName": "P. Cripps 25+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.29,
         "status": "lost"
       },
@@ -541,7 +541,7 @@
         "id": 1000000000065,
         "player": "Barks",
         "betName": "D. Wilmot 21+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.25,
         "status": "won"
       }
@@ -551,7 +551,7 @@
         "id": 1000000000066,
         "player": "Barks",
         "betName": "M. Holmes",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.25,
         "status": "won"
       },
@@ -559,7 +559,7 @@
         "id": 1000000000067,
         "player": "Jon",
         "betName": "D. Wilson 18+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.3,
         "status": "won"
       },
@@ -567,7 +567,7 @@
         "id": 1000000000068,
         "player": "Demam",
         "betName": "L. McDonald 1+ goal",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.38,
         "status": "won"
       },
@@ -575,7 +575,7 @@
         "id": 1000000000069,
         "player": "Ahern",
         "betName": "L. Neale 14+ Handballs",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.4,
         "status": "won"
       },
@@ -583,7 +583,7 @@
         "id": 1000000000070,
         "player": "Planner",
         "betName": "J. Sinclair 26+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.33,
         "status": "lost"
       }
@@ -593,7 +593,7 @@
         "id": 1000000000071,
         "player": "Planner",
         "betName": "N. Anderson 25+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.29,
         "status": "won"
       },
@@ -601,7 +601,7 @@
         "id": 1000000000072,
         "player": "Jon",
         "betName": "Bont 22+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.31,
         "status": "won"
       },
@@ -609,7 +609,7 @@
         "id": 1000000000073,
         "player": "Ahern",
         "betName": "N. Daicos 30+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.31,
         "status": "won"
       },
@@ -617,7 +617,7 @@
         "id": 1000000000074,
         "player": "Demam",
         "betName": "Adelaide H2H",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.36,
         "status": "won"
       },
@@ -625,7 +625,7 @@
         "id": 1000000000075,
         "player": "Barks",
         "betName": "R. Laird 23+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.33,
         "status": "won"
       }
@@ -635,7 +635,7 @@
         "id": 1000000000076,
         "player": "Jon",
         "betName": "N.Newman 19+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.31,
         "status": "won"
       },
@@ -643,7 +643,7 @@
         "id": 1000000000077,
         "player": "Ahern",
         "betName": "S. Walsh 24+",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.2,
         "status": "won"
       },
@@ -651,7 +651,7 @@
         "id": 1000000000078,
         "player": "Planner",
         "betName": "H. Reid 19+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.22,
         "status": "won"
       },
@@ -659,7 +659,7 @@
         "id": 1000000000079,
         "player": "Demam",
         "betName": "Carlton Lead at Half",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.22,
         "status": "won"
       },
@@ -667,7 +667,7 @@
         "id": 1000000000080,
         "player": "Jon",
         "betName": "N. Daicos 14+ handballs",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.29,
         "status": "won"
       },
@@ -675,7 +675,7 @@
         "id": 1000000000081,
         "player": "Demam",
         "betName": "Collingwood Lead at Half",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.2,
         "status": "won"
       },
@@ -683,7 +683,7 @@
         "id": 1000000000082,
         "player": "Ahern",
         "betName": "Pendles 10+ handballs",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.14,
         "status": "won"
       },
@@ -691,7 +691,7 @@
         "id": 1000000000083,
         "player": "Planner",
         "betName": "Membrey anytime goal",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.2,
         "status": "won"
       },
@@ -699,7 +699,7 @@
         "id": 1000000000084,
         "player": "Barks",
         "betName": "J. Short 21+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.22,
         "status": "won"
       },
@@ -707,7 +707,7 @@
         "id": 1000000000085,
         "player": "Barks",
         "betName": "Cripps 24+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.35,
         "status": "won"
       }
@@ -717,7 +717,7 @@
         "id": 1000000000086,
         "player": "Barks",
         "betName": "J. Newcombe 24+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.31,
         "status": "won"
       },
@@ -725,7 +725,7 @@
         "id": 1000000000087,
         "player": "Ahern",
         "betName": "N. Daicos 30+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.3,
         "status": "won"
       },
@@ -733,7 +733,7 @@
         "id": 1000000000088,
         "player": "Jon",
         "betName": "N. Anderson 26+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.28,
         "status": "lost"
       },
@@ -741,7 +741,7 @@
         "id": 1000000000089,
         "player": "Planner",
         "betName": "P. Cripps 26+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.31,
         "status": "lost"
       },
@@ -749,7 +749,7 @@
         "id": 1000000000090,
         "player": "Demam",
         "betName": "C. Wilkie 20+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.16,
         "status": "won"
       }
@@ -759,7 +759,7 @@
         "id": 1000000000091,
         "player": "Jon",
         "betName": "N. Daicos 29+ Poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.3,
         "status": "lost"
       },
@@ -767,7 +767,7 @@
         "id": 1000000000092,
         "player": "Ahern",
         "betName": "N. Daicos 6+ Clearances",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.47,
         "status": "lost"
       },
@@ -775,7 +775,7 @@
         "id": 1000000000093,
         "player": "Demam",
         "betName": "St Kilda H2H",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.58,
         "status": "won"
       },
@@ -783,7 +783,7 @@
         "id": 1000000000094,
         "player": "Planner",
         "betName": "Naz 28+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.22,
         "status": "won"
       },
@@ -791,7 +791,7 @@
         "id": 1000000000095,
         "player": "Barks",
         "betName": "C. Oliver 27+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.28,
         "status": "won"
       }
@@ -801,7 +801,7 @@
         "id": 1000000000096,
         "player": "Barks",
         "betName": "I. Heeney 24+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.29,
         "status": "won"
       },
@@ -809,7 +809,7 @@
         "id": 1000000000097,
         "player": "Planner",
         "betName": "H. Sheezel 28+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.23,
         "status": "won"
       },
@@ -817,7 +817,7 @@
         "id": 1000000000098,
         "player": "Ahern",
         "betName": "P. Cripps 22+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.25,
         "status": "won"
       },
@@ -825,7 +825,7 @@
         "id": 1000000000099,
         "player": "Jon",
         "betName": "J. Daicos 22+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.2,
         "status": "won"
       },
@@ -833,7 +833,7 @@
         "id": 1000000000100,
         "player": "Demam",
         "betName": "K. Lohmann 1+ Goal",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.16,
         "status": "won"
       }
@@ -843,7 +843,7 @@
         "id": 1000000000101,
         "player": "Barks",
         "betName": "A. Brayshaw 23+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.25,
         "status": "won"
       },
@@ -851,7 +851,7 @@
         "id": 1000000000102,
         "player": "Ahern",
         "betName": "H. Reid 22+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.62,
         "status": "won"
       },
@@ -859,7 +859,7 @@
         "id": 1000000000103,
         "player": "Jon",
         "betName": "Nas 26+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.48,
         "status": "won"
       },
@@ -867,7 +867,7 @@
         "id": 1000000000104,
         "player": "Planner",
         "betName": "D. Wilson 20+",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.45,
         "status": "won"
       },
@@ -875,7 +875,7 @@
         "id": 1000000000105,
         "player": "Demam",
         "betName": "A.Jones 1+ goals",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.27,
         "status": "won"
       }
@@ -885,7 +885,7 @@
         "id": 1000000000106,
         "player": "Jon",
         "betName": "Freo 17.5+",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.23,
         "status": "won"
       },
@@ -893,7 +893,7 @@
         "id": 1000000000107,
         "player": "Barks",
         "betName": "M. Hall 19+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.4,
         "status": "won"
       },
@@ -901,7 +901,7 @@
         "id": 1000000000108,
         "player": "Ahern",
         "betName": "Saints +6.5 line",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 2.23,
         "status": "lost"
       },
@@ -909,7 +909,7 @@
         "id": 1000000000109,
         "player": "Demam",
         "betName": "H. Reid 23+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.39,
         "status": "won"
       },
@@ -917,7 +917,7 @@
         "id": 1000000000110,
         "player": "Planner",
         "betName": "L. Neale 26+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.29,
         "status": "won"
       }
@@ -927,7 +927,7 @@
         "id": 1000000000111,
         "player": "Barks",
         "betName": "J. Ward 20+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.34,
         "status": "won"
       },
@@ -935,7 +935,7 @@
         "id": 1000000000112,
         "player": "Planner",
         "betName": "R. Thilthorpe 2+",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.26,
         "status": "lost"
       },
@@ -943,7 +943,7 @@
         "id": 1000000000113,
         "player": "Demam",
         "betName": "Ade 2+ goals Qtr",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.36,
         "status": "lost"
       },
@@ -951,7 +951,7 @@
         "id": 1000000000114,
         "player": "Ahern",
         "betName": "H. Reid 23+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.53,
         "status": "won"
       },
@@ -959,12 +959,21 @@
         "id": 1000000000115,
         "player": "Jon",
         "betName": "Brad Hill 23+ poss",
-        "wager": 10.0,
+        "wager": 10,
         "odds": 1.29,
         "status": "won"
       }
     ],
-    "23": [],
+    "23": [
+      {
+        "id": 1786748012647,
+        "player": "Demam",
+        "betName": "T. Taranto 22+ poss",
+        "wager": 10,
+        "odds": 1.42,
+        "status": "pending"
+      }
+    ],
     "24": []
   }
 }

@@ -610,9 +610,17 @@ function calculateStats(){
   return stats;
 }
 
+function compareRank(a,b,stats){
+  const sa=stats[a],sb=stats[b];
+  const recordDiff=(sb.wins-sb.losses)-(sa.wins-sa.losses);
+  if(recordDiff!==0)return recordDiff;
+  if(sb.wins!==sa.wins)return sb.wins-sa.wins;
+  return (sb.totalWinnings-sb.totalWagered)-(sa.totalWinnings-sa.totalWagered);
+}
+
 function renderLeaderboard(){
   const stats=calculateStats();
-  const sorted=[...PLAYERS].sort((a,b)=>(stats[b].totalWinnings-stats[b].totalWagered)-(stats[a].totalWinnings-stats[a].totalWagered));
+  const sorted=[...PLAYERS].sort((a,b)=>compareRank(a,b,stats));
   const rankClasses=['first','second','third','other','other'];
   document.getElementById('leaderboardBody').innerHTML=sorted.map((player,i)=>{
     const s=stats[player],profit=s.totalWinnings-s.totalWagered;
@@ -632,7 +640,7 @@ function renderSimpleLeaderboard(){
   if(!el)return;
   const stats=calculateStats();
   const rankClasses=['first','second','third','',''];
-  const sorted=[...PLAYERS].sort((a,b)=>(stats[b].totalWinnings-stats[b].totalWagered)-(stats[a].totalWinnings-stats[a].totalWagered));
+  const sorted=[...PLAYERS].sort((a,b)=>compareRank(a,b,stats));
   el.innerHTML=sorted.map((player,i)=>{
     const s=stats[player],profit=s.totalWinnings-s.totalWagered;
     const profitClass=profit>0?'pos':profit<0?'neg':'zero';
@@ -841,7 +849,7 @@ function updateBetStatus(id,status){data.rounds[currentRound]=data.rounds[curren
 function deleteBet(id){if(!confirm('Delete this bet?'))return;data.rounds[currentRound]=data.rounds[currentRound].filter(b=>b.id!==id);saveData();}
 function exportData(){
   const stats=calculateStats();
-  const sorted=[...PLAYERS].sort((a,b)=>(stats[b].totalWinnings-stats[b].totalWagered)-(stats[a].totalWinnings-stats[a].totalWagered));
+  const sorted=[...PLAYERS].sort((a,b)=>compareRank(a,b,stats));
   let csv='SURE THING 2026\n\nLEADERBOARD\nRank,Player,Wins,Losses,Voided,Pending,Wagered,Winnings,Net P&L\n';
   sorted.forEach((p,i)=>{const s=stats[p];csv+=`${i+1},${p},${s.wins},${s.losses},${s.voided},${s.pending},${s.totalWagered.toFixed(2)},${s.totalWinnings.toFixed(2)},${(s.totalWinnings-s.totalWagered).toFixed(2)}\n`;});
   csv+='\n\nALL BETS\nRound,Player,Bet,Wager,Odds,To Win,Status\n';

@@ -996,6 +996,14 @@
         "wager": 10,
         "odds": 1.33,
         "status": "pending"
+      },
+      {
+        "id": 1786847923944,
+        "player": "Barks",
+        "betName": "Z. Bailey 19+ poss",
+        "wager": 10,
+        "odds": 1.33,
+        "status": "pending"
       }
     ],
     "24": []

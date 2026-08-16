@@ -988,6 +988,14 @@
         "wager": 10,
         "odds": 1.4,
         "status": "pending"
+      },
+      {
+        "id": 1786847893321,
+        "player": "Jon",
+        "betName": "M. Rowell 24+ poss",
+        "wager": 10,
+        "odds": 1.33,
+        "status": "pending"
       }
     ],
     "24": []

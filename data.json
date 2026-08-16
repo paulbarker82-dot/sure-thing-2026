@@ -980,6 +980,14 @@
         "wager": 10,
         "odds": 1.42,
         "status": "pending"
+      },
+      {
+        "id": 1786847853972,
+        "player": "Planner",
+        "betName": "H. Sheezel 25+ poss",
+        "wager": 10,
+        "odds": 1.4,
+        "status": "pending"
       }
     ],
     "24": []

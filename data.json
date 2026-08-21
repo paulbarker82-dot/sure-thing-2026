@@ -1030,6 +1030,14 @@
         "wager": 10,
         "odds": 1.46,
         "status": "pending"
+      },
+      {
+        "id": 1787301242900,
+        "player": "Demam",
+        "betName": "I. Rankine 26+ poss",
+        "wager": 10,
+        "odds": 1.38,
+        "status": "pending"
       }
     ]
   }
